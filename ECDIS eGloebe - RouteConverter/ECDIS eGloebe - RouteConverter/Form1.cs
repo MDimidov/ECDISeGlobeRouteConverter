@@ -3,11 +3,13 @@ using System.Windows.Forms;
 
 namespace ECDIS_eGloebe___RouteConverter
 {
-	public partial class Form1 : Form
+	public partial class EcdisForm : Form
 	{
-		public Form1()
+		public EcdisForm()
 		{
 			InitializeComponent();
+			sidePanel.Top = btnHome.Top;
+			sidePanel.Height = btnHome.Height;
 		}
 
 		private void textBox1_TextChanged(object sender, EventArgs e)
@@ -19,5 +21,14 @@ namespace ECDIS_eGloebe___RouteConverter
 		{
 
 		}
+
+		private void btnHome_Click(object sender, EventArgs e)
+		{
+			sidePanel.Top = btnHome.Top;
+			sidePanel.Height = btnHome.Height;
+			homeControl1.BringToFront();
+		}
+
+
 	}
 }
