@@ -20,6 +20,13 @@ namespace ECDIS_eGloebe___RouteConverter
 		{
 			SetFormInfo();
 			File.WriteAllText(GetProjectDirectory(), ExportToStringXml());
+			MessageBox.Show($"You successfuly exported file dir: {GetProjectDirectory()}");
+		}
+
+		private void btnImportHomeInfo_Click(object sender, EventArgs e)
+		{
+			ImportFromXml();
+			ShowFormInfo();
 		}
 
 		private void SetFormInfo()
@@ -71,11 +78,19 @@ namespace ECDIS_eGloebe___RouteConverter
 			return new XmlHelper().Serialize(homeInfo, "homeInfo");
 		}
 
+		private void ImportFromXml()
+		{
+			string xmlStirng= File.ReadAllText(GetProjectDirectory());
+			homeInfo = new XmlHelper().Deserialize<HomeInfo>(xmlStirng, "homeInfo");
+		}
+
 		private static string GetProjectDirectory()
 		{
 			string relativePath = @"../../../";
 
 			return relativePath + "HomeInfo.xml";
 		}
+
+		
 	}
 }

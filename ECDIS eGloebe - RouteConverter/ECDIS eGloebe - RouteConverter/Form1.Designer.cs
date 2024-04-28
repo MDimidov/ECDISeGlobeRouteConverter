@@ -29,15 +29,16 @@
 		private void InitializeComponent()
 		{
 			this.leftMenu = new System.Windows.Forms.Panel();
-			this.btnExport = new System.Windows.Forms.Button();
 			this.sidePanel = new System.Windows.Forms.Panel();
 			this.btnImport = new System.Windows.Forms.Button();
 			this.btnHome = new System.Windows.Forms.Button();
+			this.btnExport = new System.Windows.Forms.Button();
 			this.header = new System.Windows.Forms.Panel();
 			this.btnExit = new System.Windows.Forms.Button();
 			this.mainPanel = new System.Windows.Forms.Panel();
 			this.exportControl1 = new ECDIS_eGloebe___RouteConverter.ExportControl();
 			this.homeControl1 = new ECDIS_eGloebe___RouteConverter.HomeControl();
+			this.creator = new System.Windows.Forms.Label();
 			this.leftMenu.SuspendLayout();
 			this.header.SuspendLayout();
 			this.mainPanel.SuspendLayout();
@@ -46,6 +47,7 @@
 			// leftMenu
 			// 
 			this.leftMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+			this.leftMenu.Controls.Add(this.creator);
 			this.leftMenu.Controls.Add(this.sidePanel);
 			this.leftMenu.Controls.Add(this.btnImport);
 			this.leftMenu.Controls.Add(this.btnHome);
@@ -55,22 +57,6 @@
 			this.leftMenu.Name = "leftMenu";
 			this.leftMenu.Size = new System.Drawing.Size(191, 584);
 			this.leftMenu.TabIndex = 9;
-			// 
-			// btnExport
-			// 
-			this.btnExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-			this.btnExport.FlatAppearance.BorderSize = 0;
-			this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnExport.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.btnExport.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.btnExport.Location = new System.Drawing.Point(0, 203);
-			this.btnExport.Name = "btnExport";
-			this.btnExport.Size = new System.Drawing.Size(190, 62);
-			this.btnExport.TabIndex = 11;
-			this.btnExport.Text = "Export file";
-			this.btnExport.UseCompatibleTextRendering = true;
-			this.btnExport.UseVisualStyleBackColor = false;
-			this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
 			// 
 			// sidePanel
 			// 
@@ -111,6 +97,22 @@
 			this.btnHome.UseCompatibleTextRendering = true;
 			this.btnHome.UseVisualStyleBackColor = false;
 			this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+			// 
+			// btnExport
+			// 
+			this.btnExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+			this.btnExport.FlatAppearance.BorderSize = 0;
+			this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnExport.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.btnExport.ForeColor = System.Drawing.SystemColors.ButtonFace;
+			this.btnExport.Location = new System.Drawing.Point(0, 203);
+			this.btnExport.Name = "btnExport";
+			this.btnExport.Size = new System.Drawing.Size(190, 62);
+			this.btnExport.TabIndex = 11;
+			this.btnExport.Text = "Export file";
+			this.btnExport.UseCompatibleTextRendering = true;
+			this.btnExport.UseVisualStyleBackColor = false;
+			this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
 			// 
 			// header
 			// 
@@ -161,6 +163,17 @@
 			this.homeControl1.Size = new System.Drawing.Size(870, 550);
 			this.homeControl1.TabIndex = 0;
 			// 
+			// creator
+			// 
+			this.creator.AutoSize = true;
+			this.creator.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.creator.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+			this.creator.Location = new System.Drawing.Point(3, 566);
+			this.creator.Name = "creator";
+			this.creator.Size = new System.Drawing.Size(116, 15);
+			this.creator.TabIndex = 12;
+			this.creator.Text = "Designed by Dimidov";
+			// 
 			// EcdisForm
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -174,6 +187,7 @@
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "eGlobe Passage Plan Generator";
 			this.leftMenu.ResumeLayout(false);
+			this.leftMenu.PerformLayout();
 			this.header.ResumeLayout(false);
 			this.mainPanel.ResumeLayout(false);
 			this.ResumeLayout(false);
@@ -191,6 +205,7 @@
 		private HomeControl homeControl1;
 		private System.Windows.Forms.Button btnExport;
 		private ExportControl exportControl1;
+		private System.Windows.Forms.Label creator;
 	}
 }
 

@@ -51,6 +51,7 @@
 			this.tbVessel = new System.Windows.Forms.TextBox();
 			this.lbVessel = new System.Windows.Forms.Label();
 			this.btnExportHomeInfo = new System.Windows.Forms.Button();
+			this.btnImportHomeInfo = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// lbMaster
@@ -272,10 +273,21 @@
 			this.btnExportHomeInfo.UseVisualStyleBackColor = true;
 			this.btnExportHomeInfo.Click += new System.EventHandler(this.btnExportHomeInfo_Click);
 			// 
+			// btnImportHomeInfo
+			// 
+			this.btnImportHomeInfo.Location = new System.Drawing.Point(331, 459);
+			this.btnImportHomeInfo.Name = "btnImportHomeInfo";
+			this.btnImportHomeInfo.Size = new System.Drawing.Size(245, 69);
+			this.btnImportHomeInfo.TabIndex = 36;
+			this.btnImportHomeInfo.Text = "Import info";
+			this.btnImportHomeInfo.UseVisualStyleBackColor = true;
+			this.btnImportHomeInfo.Click += new System.EventHandler(this.btnImportHomeInfo_Click);
+			// 
 			// HomeControl
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.btnImportHomeInfo);
 			this.Controls.Add(this.btnExportHomeInfo);
 			this.Controls.Add(this.textBox1);
 			this.Controls.Add(this.label1);
@@ -331,5 +343,6 @@
 		private System.Windows.Forms.TextBox tbVessel;
 		private System.Windows.Forms.Label lbVessel;
 		private System.Windows.Forms.Button btnExportHomeInfo;
+		private System.Windows.Forms.Button btnImportHomeInfo;
 	}
 }
