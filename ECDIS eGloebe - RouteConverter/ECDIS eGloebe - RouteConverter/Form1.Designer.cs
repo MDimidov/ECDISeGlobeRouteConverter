@@ -29,12 +29,14 @@
 		private void InitializeComponent()
 		{
 			this.leftMenu = new System.Windows.Forms.Panel();
+			this.btnExport = new System.Windows.Forms.Button();
 			this.sidePanel = new System.Windows.Forms.Panel();
 			this.btnImport = new System.Windows.Forms.Button();
 			this.btnHome = new System.Windows.Forms.Button();
 			this.header = new System.Windows.Forms.Panel();
 			this.btnExit = new System.Windows.Forms.Button();
 			this.mainPanel = new System.Windows.Forms.Panel();
+			this.exportControl1 = new ECDIS_eGloebe___RouteConverter.ExportControl();
 			this.homeControl1 = new ECDIS_eGloebe___RouteConverter.HomeControl();
 			this.leftMenu.SuspendLayout();
 			this.header.SuspendLayout();
@@ -47,11 +49,28 @@
 			this.leftMenu.Controls.Add(this.sidePanel);
 			this.leftMenu.Controls.Add(this.btnImport);
 			this.leftMenu.Controls.Add(this.btnHome);
+			this.leftMenu.Controls.Add(this.btnExport);
 			this.leftMenu.Dock = System.Windows.Forms.DockStyle.Left;
 			this.leftMenu.Location = new System.Drawing.Point(0, 0);
 			this.leftMenu.Name = "leftMenu";
 			this.leftMenu.Size = new System.Drawing.Size(191, 584);
 			this.leftMenu.TabIndex = 9;
+			// 
+			// btnExport
+			// 
+			this.btnExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+			this.btnExport.FlatAppearance.BorderSize = 0;
+			this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnExport.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.btnExport.ForeColor = System.Drawing.SystemColors.ButtonFace;
+			this.btnExport.Location = new System.Drawing.Point(0, 203);
+			this.btnExport.Name = "btnExport";
+			this.btnExport.Size = new System.Drawing.Size(190, 62);
+			this.btnExport.TabIndex = 11;
+			this.btnExport.Text = "Export file";
+			this.btnExport.UseCompatibleTextRendering = true;
+			this.btnExport.UseVisualStyleBackColor = false;
+			this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
 			// 
 			// sidePanel
 			// 
@@ -68,13 +87,14 @@
 			this.btnImport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnImport.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.btnImport.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.btnImport.Location = new System.Drawing.Point(0, 136);
+			this.btnImport.Location = new System.Drawing.Point(0, 134);
 			this.btnImport.Name = "btnImport";
 			this.btnImport.Size = new System.Drawing.Size(190, 62);
 			this.btnImport.TabIndex = 1;
 			this.btnImport.Text = "Import file";
 			this.btnImport.UseCompatibleTextRendering = true;
 			this.btnImport.UseVisualStyleBackColor = false;
+			this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
 			// 
 			// btnHome
 			// 
@@ -119,12 +139,20 @@
 			// 
 			// mainPanel
 			// 
+			this.mainPanel.Controls.Add(this.exportControl1);
 			this.mainPanel.Controls.Add(this.homeControl1);
 			this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.mainPanel.Location = new System.Drawing.Point(191, 32);
 			this.mainPanel.Name = "mainPanel";
 			this.mainPanel.Size = new System.Drawing.Size(872, 552);
 			this.mainPanel.TabIndex = 11;
+			// 
+			// exportControl1
+			// 
+			this.exportControl1.Location = new System.Drawing.Point(0, 0);
+			this.exportControl1.Name = "exportControl1";
+			this.exportControl1.Size = new System.Drawing.Size(872, 552);
+			this.exportControl1.TabIndex = 1;
 			// 
 			// homeControl1
 			// 
@@ -161,6 +189,8 @@
 		private System.Windows.Forms.Button btnExit;
 		private System.Windows.Forms.Panel mainPanel;
 		private HomeControl homeControl1;
+		private System.Windows.Forms.Button btnExport;
+		private ExportControl exportControl1;
 	}
 }
 

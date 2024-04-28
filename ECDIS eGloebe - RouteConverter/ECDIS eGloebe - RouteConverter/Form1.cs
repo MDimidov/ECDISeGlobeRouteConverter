@@ -10,6 +10,8 @@ namespace ECDIS_eGloebe___RouteConverter
 			InitializeComponent();
 			sidePanel.Top = btnHome.Top;
 			sidePanel.Height = btnHome.Height;
+			homeControl1.BringToFront();
+
 		}
 
 		private void textBox1_TextChanged(object sender, EventArgs e)
@@ -33,6 +35,19 @@ namespace ECDIS_eGloebe___RouteConverter
 		{
 			//MessageBox.Show("Do you want to exit this program?");
 			Application.Exit();
+		}
+
+		private void btnExport_Click(object sender, EventArgs e)
+		{
+			sidePanel.Top = btnExport.Top;
+			sidePanel.Height = btnExport.Height;
+			exportControl1.BringToFront();
+		}
+
+		private void btnImport_Click(object sender, EventArgs e)
+		{
+			sidePanel.Top = btnImport.Top;
+			sidePanel.Height = btnImport.Height;
 		}
 	}
 }

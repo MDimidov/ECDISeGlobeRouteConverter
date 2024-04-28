@@ -38,9 +38,9 @@
 			this.lbDelegateOfficer = new System.Windows.Forms.Label();
 			this.tbWKO2 = new System.Windows.Forms.TextBox();
 			this.lbWKO2 = new System.Windows.Forms.Label();
-			this.textBox4 = new System.Windows.Forms.TextBox();
+			this.tbDraftAft = new System.Windows.Forms.TextBox();
 			this.label4 = new System.Windows.Forms.Label();
-			this.textBox6 = new System.Windows.Forms.TextBox();
+			this.tbDraftFwd = new System.Windows.Forms.TextBox();
 			this.label6 = new System.Windows.Forms.Label();
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
@@ -50,6 +50,7 @@
 			this.lbPortFrom = new System.Windows.Forms.Label();
 			this.tbVessel = new System.Windows.Forms.TextBox();
 			this.lbVessel = new System.Windows.Forms.Label();
+			this.btnExportHomeInfo = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// lbMaster
@@ -97,7 +98,6 @@
 			this.tbWKO1.Name = "tbWKO1";
 			this.tbWKO1.Size = new System.Drawing.Size(331, 31);
 			this.tbWKO1.TabIndex = 20;
-			this.tbWKO1.Text = "DIMIDOV, MARIYAN";
 			// 
 			// lbWKO1
 			// 
@@ -148,13 +148,13 @@
 			this.lbWKO2.TabIndex = 21;
 			this.lbWKO2.Text = "WKO2 Name";
 			// 
-			// textBox4
+			// tbDraftAft
 			// 
-			this.textBox4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.textBox4.Location = new System.Drawing.Point(25, 384);
-			this.textBox4.Name = "textBox4";
-			this.textBox4.Size = new System.Drawing.Size(129, 31);
-			this.textBox4.TabIndex = 26;
+			this.tbDraftAft.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.tbDraftAft.Location = new System.Drawing.Point(25, 384);
+			this.tbDraftAft.Name = "tbDraftAft";
+			this.tbDraftAft.Size = new System.Drawing.Size(129, 31);
+			this.tbDraftAft.TabIndex = 26;
 			// 
 			// label4
 			// 
@@ -167,13 +167,13 @@
 			this.label4.TabIndex = 25;
 			this.label4.Text = "Draft AFT";
 			// 
-			// textBox6
+			// tbDraftFwd
 			// 
-			this.textBox6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.textBox6.Location = new System.Drawing.Point(25, 329);
-			this.textBox6.Name = "textBox6";
-			this.textBox6.Size = new System.Drawing.Size(129, 31);
-			this.textBox6.TabIndex = 24;
+			this.tbDraftFwd.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.tbDraftFwd.Location = new System.Drawing.Point(25, 329);
+			this.tbDraftFwd.Name = "tbDraftFwd";
+			this.tbDraftFwd.Size = new System.Drawing.Size(129, 31);
+			this.tbDraftFwd.TabIndex = 24;
 			// 
 			// label6
 			// 
@@ -250,7 +250,6 @@
 			this.tbVessel.Name = "tbVessel";
 			this.tbVessel.Size = new System.Drawing.Size(331, 31);
 			this.tbVessel.TabIndex = 28;
-			this.tbVessel.Text = "Eurocargo Salerno";
 			// 
 			// lbVessel
 			// 
@@ -263,10 +262,21 @@
 			this.lbVessel.TabIndex = 27;
 			this.lbVessel.Text = "Vessel Name";
 			// 
+			// btnExportHomeInfo
+			// 
+			this.btnExportHomeInfo.Location = new System.Drawing.Point(587, 459);
+			this.btnExportHomeInfo.Name = "btnExportHomeInfo";
+			this.btnExportHomeInfo.Size = new System.Drawing.Size(245, 69);
+			this.btnExportHomeInfo.TabIndex = 35;
+			this.btnExportHomeInfo.Text = "Export Info";
+			this.btnExportHomeInfo.UseVisualStyleBackColor = true;
+			this.btnExportHomeInfo.Click += new System.EventHandler(this.btnExportHomeInfo_Click);
+			// 
 			// HomeControl
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.btnExportHomeInfo);
 			this.Controls.Add(this.textBox1);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.tbPortTo);
@@ -275,9 +285,9 @@
 			this.Controls.Add(this.lbPortFrom);
 			this.Controls.Add(this.tbVessel);
 			this.Controls.Add(this.lbVessel);
-			this.Controls.Add(this.textBox4);
+			this.Controls.Add(this.tbDraftAft);
 			this.Controls.Add(this.label4);
-			this.Controls.Add(this.textBox6);
+			this.Controls.Add(this.tbDraftFwd);
 			this.Controls.Add(this.label6);
 			this.Controls.Add(this.tbWKO2);
 			this.Controls.Add(this.lbWKO2);
@@ -308,9 +318,9 @@
 		private System.Windows.Forms.Label lbDelegateOfficer;
 		private System.Windows.Forms.TextBox tbWKO2;
 		private System.Windows.Forms.Label lbWKO2;
-		private System.Windows.Forms.TextBox textBox4;
+		private System.Windows.Forms.TextBox tbDraftAft;
 		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.TextBox textBox6;
+		private System.Windows.Forms.TextBox tbDraftFwd;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.TextBox textBox1;
 		private System.Windows.Forms.Label label1;
@@ -320,5 +330,6 @@
 		private System.Windows.Forms.Label lbPortFrom;
 		private System.Windows.Forms.TextBox tbVessel;
 		private System.Windows.Forms.Label lbVessel;
+		private System.Windows.Forms.Button btnExportHomeInfo;
 	}
 }
