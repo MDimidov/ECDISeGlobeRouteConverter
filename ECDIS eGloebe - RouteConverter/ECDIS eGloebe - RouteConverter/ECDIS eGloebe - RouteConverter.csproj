@@ -48,7 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\HomeInfo.cs" />
+    <Compile Include="DTOs\HomeInfo.cs" />
     <Compile Include="ExportControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -75,6 +75,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\XmlHelper.cs" />
     <EmbeddedResource Include="ExportControl.resx">
       <DependentUpon>ExportControl.cs</DependentUpon>
     </EmbeddedResource>

@@ -1,12 +1,7 @@
-﻿using ECDIS_eGloebe___RouteConverter.Classes;
+﻿using ECDIS_eGloebe___RouteConverter.DTOs;
+using ECDIS_eGloebe___RouteConverter.Utilities;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace ECDIS_eGloebe___RouteConverter
@@ -24,6 +19,7 @@ namespace ECDIS_eGloebe___RouteConverter
 		private void btnExportHomeInfo_Click(object sender, EventArgs e)
 		{
 			SetFormInfo();
+			File.WriteAllText(GetProjectDirectory(), ExportToStringXml());
 		}
 
 		private void SetFormInfo()
@@ -46,7 +42,7 @@ namespace ECDIS_eGloebe___RouteConverter
 				MessageBox.Show($"Please enter valid number for draft");
 			}
 
-			if (double.TryParse(tbDraftFwd.Text, out double draftAft))
+			if (double.TryParse(tbDraftAft.Text, out double draftAft))
 			{
 				homeInfo.draftAFT = draftAft;
 			}
@@ -68,6 +64,18 @@ namespace ECDIS_eGloebe___RouteConverter
 			tbPortTo.Text = homeInfo.PortTo;
 			tbDraftFwd.Text = homeInfo.draftFWD.ToString();
 			tbDraftAft.Text = homeInfo.draftAFT.ToString();
+		}
+
+		private string ExportToStringXml()
+		{
+			return new XmlHelper().Serialize(homeInfo, "homeInfo");
+		}
+
+		private static string GetProjectDirectory()
+		{
+			string relativePath = @"../../../";
+
+			return relativePath + "HomeInfo.xml";
 		}
 	}
 }

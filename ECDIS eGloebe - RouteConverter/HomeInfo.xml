@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-16"?>
+<homeInfo>
+  <MasterName>Damyan, Ivanov</MasterName>
+  <ChiefMateName>Mihaylov, Nikolay</ChiefMateName>
+  <DelegateOfficerName>Yosifov, Kaloyan</DelegateOfficerName>
+  <WKO1Name>Dimidov, Mariyan</WKO1Name>
+  <WKO2Name>Veselinov, Denislav</WKO2Name>
+  <VesselName>Eurocargo Salerno</VesselName>
+  <PortFrom>Alexandria</PortFrom>
+  <PortTo>Ashdod</PortTo>
+  <draftFWD>5.2</draftFWD>
+  <draftAFT>6.5</draftAFT>
+</homeInfo>
