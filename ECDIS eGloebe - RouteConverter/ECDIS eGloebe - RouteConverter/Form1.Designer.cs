@@ -33,7 +33,7 @@
 			this.btnImport = new System.Windows.Forms.Button();
 			this.btnHome = new System.Windows.Forms.Button();
 			this.header = new System.Windows.Forms.Panel();
-			this.button2 = new System.Windows.Forms.Button();
+			this.btnExit = new System.Windows.Forms.Button();
 			this.mainPanel = new System.Windows.Forms.Panel();
 			this.homeControl1 = new ECDIS_eGloebe___RouteConverter.HomeControl();
 			this.leftMenu.SuspendLayout();
@@ -95,25 +95,27 @@
 			// header
 			// 
 			this.header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-			this.header.Controls.Add(this.button2);
+			this.header.Controls.Add(this.btnExit);
 			this.header.Dock = System.Windows.Forms.DockStyle.Top;
 			this.header.Location = new System.Drawing.Point(191, 0);
 			this.header.Name = "header";
 			this.header.Size = new System.Drawing.Size(872, 32);
 			this.header.TabIndex = 10;
 			// 
-			// button2
+			// btnExit
 			// 
-			this.button2.FlatAppearance.BorderSize = 0;
-			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button2.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.button2.Location = new System.Drawing.Point(843, 0);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(26, 29);
-			this.button2.TabIndex = 0;
-			this.button2.Text = "X";
-			this.button2.UseVisualStyleBackColor = true;
+			this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnExit.FlatAppearance.BorderSize = 0;
+			this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnExit.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.btnExit.ForeColor = System.Drawing.SystemColors.ButtonFace;
+			this.btnExit.Location = new System.Drawing.Point(843, 0);
+			this.btnExit.Name = "btnExit";
+			this.btnExit.Size = new System.Drawing.Size(26, 29);
+			this.btnExit.TabIndex = 0;
+			this.btnExit.Text = "X";
+			this.btnExit.UseVisualStyleBackColor = true;
+			this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
 			// 
 			// mainPanel
 			// 
@@ -133,13 +135,15 @@
 			// 
 			// EcdisForm
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.ClientSize = new System.Drawing.Size(1063, 584);
 			this.Controls.Add(this.mainPanel);
 			this.Controls.Add(this.header);
 			this.Controls.Add(this.leftMenu);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
 			this.Name = "EcdisForm";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "eGlobe Passage Plan Generator";
 			this.leftMenu.ResumeLayout(false);
 			this.header.ResumeLayout(false);
@@ -154,7 +158,7 @@
 		private System.Windows.Forms.Button btnHome;
 		private System.Windows.Forms.Panel sidePanel;
 		private System.Windows.Forms.Panel header;
-		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Button btnExit;
 		private System.Windows.Forms.Panel mainPanel;
 		private HomeControl homeControl1;
 	}

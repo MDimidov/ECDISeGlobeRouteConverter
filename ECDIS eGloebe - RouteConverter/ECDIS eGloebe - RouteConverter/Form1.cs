@@ -29,6 +29,10 @@ namespace ECDIS_eGloebe___RouteConverter
 			homeControl1.BringToFront();
 		}
 
-
+		private void btnExit_Click(object sender, EventArgs e)
+		{
+			//MessageBox.Show("Do you want to exit this program?");
+			Application.Exit();
+		}
 	}
 }
