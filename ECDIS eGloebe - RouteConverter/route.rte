@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root>
+<route name="ASHDOD-GIOIA TAURO S OF KRITI more  to greece" version="3">
+    <metadata>
+        <author>SevenCs eGlobe 1.1.1.17</author>
+        <timestamp>2024-03-19T20:13:02</timestamp>
+    </metadata>
+    <defaults>
+        <xte>
+            <both-sided>100</both-sided>
+        </xte>
+        <turningRadius>200</turningRadius>
+        <plannedSpeed>0</plannedSpeed>
+    </defaults>
+    <routecheck>
+        <routeLastCheck>2024-03-19T20:12:49</routeLastCheck>
+        <routeCheckProvider>eGlobeMaster</routeCheckProvider>
+        <routeCheckDraft>15</routeCheckDraft>
+        <routeCheckSafeContour>15</routeCheckSafeContour>
+        <routeCheckAirDraft>40</routeCheckAirDraft>
+    </routecheck>
+    <waypoints>
+        <waypoint>
+            <position latitude="31.83333333333334" longitude="34.65"/>
+            <turningRadius>200</turningRadius>
+            <tidalLevel>0</tidalLevel>
+            <legType>rhumbline</legType>
+            <xte merge="false">
+                <both-sided>100</both-sided>
+            </xte>
+            <antiGroundingStatus>notChecked</antiGroundingStatus>
+            <weatherOptimizable>false</weatherOptimizable>
+            <timeZone>120</timeZone>
+        </waypoint>
+        <waypoint>
+            <position latitude="31.83333333333334" longitude="34.64"/>
+            <turningRadius>200</turningRadius>
+            <tidalLevel>0</tidalLevel>
+            <legType>rhumbline</legType>
+            <xte merge="false">
+                <both-sided>70</both-sided>
+            </xte>
+            <antiGroundingStatus>checkedDangers</antiGroundingStatus>
+            <weatherOptimizable>false</weatherOptimizable>
+            <timeZone>120</timeZone>
+        </waypoint>
+        <waypoint>
+            <position latitude="31.85166666666667" longitude="34.64"/>
+            <turningRadius>200</turningRadius>
+            <tidalLevel>0</tidalLevel>
+            <legType>rhumbline</legType>
+            <xte merge="false">
+                <port>60</port>
+                <starboard>70</starboard>
+            </xte>
+            <antiGroundingStatus>checkedSafe</antiGroundingStatus>
+            <weatherOptimizable>false</weatherOptimizable>
+            <timeZone>120</timeZone>
+        </waypoint>
+        <waypoint>
+            <position latitude="31.855" longitude="34.63666666666667"/>
+            <turningRadius>200</turningRadius>
+            <tidalLevel>0</tidalLevel>
+            <legType>rhumbline</legType>
+            <xte merge="false">
+                <both-sided>100</both-sided>
+            </xte>
+            <antiGroundingStatus>checkedSafe</antiGroundingStatus>
+            <weatherOptimizable>false</weatherOptimizable>
+            <timeZone>120</timeZone>
+        </waypoint>
+        <waypoint name="AWSHDOD P/S">
+            <position latitude="31.85216666666667" longitude="34.62083333333333"/>
+            <turningRadius>200</turningRadius>
+            <tidalLevel>0</tidalLevel>
+            <legType>rhumbline</legType>
+            <xte merge="false">
+                <both-sided>300</both-sided>
+            </xte>
+            <antiGroundingStatus>checkedSafe</antiGroundingStatus>
+            <weatherOptimizable>false</weatherOptimizable>
+            <timeZone>120</timeZone>
+        </waypoint>
+        <waypoint>
+            <position latitude="31.86666666666666" longitude="34.50833333333333"/>
+            <turningRadius>200</turningRadius>
+            <tidalLevel>0</tidalLevel>
+            <legType>rhumbline</legType>
+            <xte merge="false">
+                <both-sided>500</both-sided>
+            </xte>
+            <antiGroundingStatus>checkedSafe</antiGroundingStatus>
+            <weatherOptimizable>false</weatherOptimizable>
+            <timeZone>120</timeZone>
+        </waypoint>
+        <waypoint>
+            <position latitude="32.13333333333333" longitude="33.81666666666667"/>
+            <turningRadius>200</turningRadius>
+            <tidalLevel>0</tidalLevel>
+            <legType>rhumbline</legType>
+            <xte merge="false">
+                <both-sided>1000</both-sided>
+            </xte>
+            <antiGroundingStatus>checkedSafe</antiGroundingStatus>
+            <weatherOptimizable>false</weatherOptimizable>
+            <timeZone>120</timeZone>
+        </waypoint>
+        <waypoint>
+            <position latitude="34.775" longitude="25.69333333333334"/>
+            <turningRadius>200</turningRadius>
+            <tidalLevel>0</tidalLevel>
+            <legType>rhumbline</legType>
+            <xte merge="false">
+                <both-sided>1000</both-sided>
+            </xte>
+            <antiGroundingStatus>checkedSafe</antiGroundingStatus>
+            <weatherOptimizable>false</weatherOptimizable>
+            <timeZone>60</timeZone>
+        </waypoint>
+        <waypoint>
+            <position latitude="34.83666666666667" longitude="24.71166666666667"/>
+            <turningRadius>200</turningRadius>
+            <tidalLevel>0</tidalLevel>
+            <legType>rhumbline</legType>
+            <xte merge="false">
+                <both-sided>1000</both-sided>
+            </xte>
+            <antiGroundingStatus>checkedSafe</antiGroundingStatus>
+            <weatherOptimizable>false</weatherOptimizable>
+            <timeZone>60</timeZone>
+        </waypoint>
+        <waypoint>
+            <position latitude="35.17555" longitude="23.465"/>
+            <turningRadius>200</turningRadius>
+            <tidalLevel>0</tidalLevel>
+            <legType>rhumbline</legType>
+            <xte merge="false">
+                <both-sided>1000</both-sided>
+            </xte>
+            <antiGroundingStatus>checkedSafe</antiGroundingStatus>
+            <weatherOptimizable>false</weatherOptimizable>
+            <timeZone>60</timeZone>
+        </waypoint>
+        <waypoint>
+            <position latitude="36.04251666666666" longitude="22.94576666666667"/>
+            <turningRadius>200</turningRadius>
+            <tidalLevel>0</tidalLevel>
+            <legType>rhumbline</legType>
+            <xte merge="false">
+                <both-sided>1000</both-sided>
+            </xte>
+            <antiGroundingStatus>checkedSafe</antiGroundingStatus>
+            <weatherOptimizable>false</weatherOptimizable>
+            <timeZone>60</timeZone>
+        </waypoint>
+        <waypoint>
+            <position latitude="36.66666666666666" longitude="21.65666666666667"/>
+            <turningRadius>200</turningRadius>
+            <tidalLevel>0</tidalLevel>
+            <legType>rhumbline</legType>
+            <xte merge="false">
+                <both-sided>1000</both-sided>
+            </xte>
+            <antiGroundingStatus>checkedSafe</antiGroundingStatus>
+            <weatherOptimizable>false</weatherOptimizable>
+            <timeZone>60</timeZone>
+        </waypoint>
+        <waypoint name="CAPO DEL ARMI">
+            <position latitude="37.79833333333333" longitude="15.93166666666667"/>
+            <turningRadius>200</turningRadius>
+            <tidalLevel>0</tidalLevel>
+            <legType>rhumbline</legType>
+            <xte merge="false">
+                <both-sided>1000</both-sided>
+            </xte>
+            <antiGroundingStatus>checkedSafe</antiGroundingStatus>
+            <weatherOptimizable>false</weatherOptimizable>
+            <timeZone>60</timeZone>
+        </waypoint>
+        <waypoint>
+            <position latitude="37.9275" longitude="15.64"/>
+            <turningRadius>200</turningRadius>
+            <tidalLevel>0</tidalLevel>
+            <legType>rhumbline</legType>
+            <xte merge="false">
+                <both-sided>1000</both-sided>
+            </xte>
+            <antiGroundingStatus>checkedSafe</antiGroundingStatus>
+            <weatherOptimizable>false</weatherOptimizable>
+            <timeZone>60</timeZone>
+        </waypoint>
+        <waypoint>
+            <position latitude="38.01666666666667" longitude="15.59166666666667"/>
+            <turningRadius>200</turningRadius>
+            <tidalLevel>0</tidalLevel>
+            <legType>rhumbline</legType>
+            <xte merge="false">
+                <both-sided>1000</both-sided>
+            </xte>
+            <antiGroundingStatus>checkedSafe</antiGroundingStatus>
+            <weatherOptimizable>false</weatherOptimizable>
+            <timeZone>60</timeZone>
+        </waypoint>
+        <waypoint name="MESSINA P/S">
+            <position latitude="38.14833333333333" longitude="15.61"/>
+            <turningRadius>200</turningRadius>
+            <tidalLevel>0</tidalLevel>
+            <legType>rhumbline</legType>
+            <xte merge="false">
+                <both-sided>1000</both-sided>
+            </xte>
+            <antiGroundingStatus>checkedSafe</antiGroundingStatus>
+            <weatherOptimizable>false</weatherOptimizable>
+            <timeZone>60</timeZone>
+        </waypoint>
+        <waypoint>
+            <position latitude="38.23333333333333" longitude="15.62"/>
+            <turningRadius>200</turningRadius>
+            <tidalLevel>0</tidalLevel>
+            <legType>rhumbline</legType>
+            <xte merge="false">
+                <both-sided>400</both-sided>
+            </xte>
+            <antiGroundingStatus>checkedSafe</antiGroundingStatus>
+            <weatherOptimizable>false</weatherOptimizable>
+            <timeZone>60</timeZone>
+        </waypoint>
+        <waypoint>
+            <position latitude="38.26666666666667" longitude="15.68916666666667"/>
+            <turningRadius>200</turningRadius>
+            <tidalLevel>0</tidalLevel>
+            <legType>rhumbline</legType>
+            <xte merge="false">
+                <both-sided>400</both-sided>
+            </xte>
+            <antiGroundingStatus>checkedSafe</antiGroundingStatus>
+            <weatherOptimizable>false</weatherOptimizable>
+            <timeZone>60</timeZone>
+        </waypoint>
+        <waypoint name="MESSINA PILOT OFF">
+            <position latitude="38.28333333333333" longitude="15.72"/>
+            <turningRadius>200</turningRadius>
+            <tidalLevel>0</tidalLevel>
+            <legType>rhumbline</legType>
+            <xte merge="false">
+                <port>1000</port>
+                <starboard>500</starboard>
+            </xte>
+            <antiGroundingStatus>checkedSafe</antiGroundingStatus>
+            <weatherOptimizable>false</weatherOptimizable>
+            <timeZone>60</timeZone>
+        </waypoint>
+        <waypoint name="GIOIA TAURO P/S">
+            <position latitude="38.45000000000001" longitude="15.87116666666667"/>
+            <turningRadius>200</turningRadius>
+            <tidalLevel>0</tidalLevel>
+            <legType>rhumbline</legType>
+            <xte merge="false">
+                <both-sided>1000</both-sided>
+            </xte>
+            <antiGroundingStatus>checkedSafe</antiGroundingStatus>
+            <weatherOptimizable>false</weatherOptimizable>
+            <timeZone>60</timeZone>
+        </waypoint>
+        <waypoint>
+            <position latitude="38.44492334231676" longitude="15.88877474666881"/>
+            <turningRadius>200</turningRadius>
+            <tidalLevel>0</tidalLevel>
+            <legType>rhumbline</legType>
+            <xte merge="false">
+                <both-sided>200</both-sided>
+            </xte>
+            <antiGroundingStatus>checkedSafe</antiGroundingStatus>
+            <weatherOptimizable>false</weatherOptimizable>
+            <timeZone>60</timeZone>
+        </waypoint>
+        <waypoint>
+            <position latitude="38.44216666666667" longitude="15.89916666666667"/>
+            <turningRadius>200</turningRadius>
+            <tidalLevel>0</tidalLevel>
+            <legType>rhumbline</legType>
+            <xte merge="false">
+                <both-sided>20</both-sided>
+            </xte>
+            <antiGroundingStatus>checkedDangers</antiGroundingStatus>
+            <weatherOptimizable>false</weatherOptimizable>
+            <timeZone>60</timeZone>
+        </waypoint>
+        <waypoint>
+            <position latitude="38.46166666666667" longitude="15.9075"/>
+            <turningRadius>200</turningRadius>
+            <tidalLevel>0</tidalLevel>
+            <legType>rhumbline</legType>
+            <xte merge="false">
+                <port>100</port>
+                <starboard>60</starboard>
+            </xte>
+            <antiGroundingStatus>checkedDangers</antiGroundingStatus>
+            <weatherOptimizable>false</weatherOptimizable>
+            <timeZone>60</timeZone>
+        </waypoint>
+        <waypoint name="GIOIA TAURO BERTH">
+            <position latitude="38.4735752151841" longitude="15.91751913389386"/>
+            <turningRadius>200</turningRadius>
+            <tidalLevel>0</tidalLevel>
+            <legType>rhumbline</legType>
+            <xte merge="false">
+                <port>100</port>
+                <starboard>60</starboard>
+            </xte>
+            <antiGroundingStatus>checkedDangers</antiGroundingStatus>
+            <weatherOptimizable>false</weatherOptimizable>
+            <timeZone>60</timeZone>
+        </waypoint>
+    </waypoints>
+</route>

@@ -8,7 +8,7 @@ namespace ECDIS_eGloebe___RouteConverter
 {
 	public partial class HomeControl : UserControl
 	{
-		HomeInfo homeInfo = new HomeInfo();
+		HomeInfoDto homeInfo = new HomeInfoDto();
 
 		public HomeControl()
 		{
@@ -69,8 +69,8 @@ namespace ECDIS_eGloebe___RouteConverter
 			tbVessel.Text = homeInfo.VesselName;
 			tbPortFrom.Text = homeInfo.PortFrom;
 			tbPortTo.Text = homeInfo.PortTo;
-			tbDraftFwd.Text = homeInfo.draftFWD.ToString();
-			tbDraftAft.Text = homeInfo.draftAFT.ToString();
+			tbDraftFwd.Text = homeInfo.draftFWD.ToString("f1");
+			tbDraftAft.Text = homeInfo.draftAFT.ToString("f1");
 		}
 
 		private string ExportToStringXml()
@@ -81,7 +81,8 @@ namespace ECDIS_eGloebe___RouteConverter
 		private void ImportFromXml()
 		{
 			string xmlStirng= File.ReadAllText(GetProjectDirectory());
-			homeInfo = new XmlHelper().Deserialize<HomeInfo>(xmlStirng, "homeInfo");
+			homeInfo = new XmlHelper()
+				.Deserialize<HomeInfoDto>(xmlStirng, "homeInfo");
 		}
 
 		private static string GetProjectDirectory()

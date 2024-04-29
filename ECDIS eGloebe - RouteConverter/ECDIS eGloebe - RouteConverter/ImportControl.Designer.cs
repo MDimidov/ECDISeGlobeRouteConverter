@@ -28,12 +28,24 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.btnImportRoute = new System.Windows.Forms.Button();
 			this.SuspendLayout();
+			// 
+			// btnImportRoute
+			// 
+			this.btnImportRoute.Location = new System.Drawing.Point(38, 63);
+			this.btnImportRoute.Name = "btnImportRoute";
+			this.btnImportRoute.Size = new System.Drawing.Size(245, 69);
+			this.btnImportRoute.TabIndex = 37;
+			this.btnImportRoute.Text = "Import route file";
+			this.btnImportRoute.UseVisualStyleBackColor = true;
+			this.btnImportRoute.Click += new System.EventHandler(this.btnImportRoute_Click);
 			// 
 			// ImportControl
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.btnImportRoute);
 			this.Name = "ImportControl";
 			this.Size = new System.Drawing.Size(872, 552);
 			this.ResumeLayout(false);
@@ -41,5 +53,7 @@
 		}
 
 		#endregion
+
+		private System.Windows.Forms.Button btnImportRoute;
 	}
 }

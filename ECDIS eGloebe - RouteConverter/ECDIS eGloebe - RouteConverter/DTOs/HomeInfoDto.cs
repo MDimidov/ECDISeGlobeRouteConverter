@@ -3,9 +3,10 @@ using System.Xml.Serialization;
 
 namespace ECDIS_eGloebe___RouteConverter.DTOs
 {
-	public class HomeInfo
+	[XmlRoot("homeInfo")]
+	public class HomeInfoDto
 	{
-		public HomeInfo()
+		public HomeInfoDto()
 		{
 			WKO1Name = "Dimidov, Mariyan";
 			VesselName = "Eurocargo Salerno";

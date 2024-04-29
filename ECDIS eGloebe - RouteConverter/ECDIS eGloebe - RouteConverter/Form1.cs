@@ -48,6 +48,7 @@ namespace ECDIS_eGloebe___RouteConverter
 		{
 			sidePanel.Top = btnImport.Top;
 			sidePanel.Height = btnImport.Height;
+			importControl1.BringToFront();
 		}
 	}
 }

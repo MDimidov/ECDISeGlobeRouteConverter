@@ -39,6 +39,7 @@
 			this.exportControl1 = new ECDIS_eGloebe___RouteConverter.ExportControl();
 			this.homeControl1 = new ECDIS_eGloebe___RouteConverter.HomeControl();
 			this.creator = new System.Windows.Forms.Label();
+			this.importControl1 = new ECDIS_eGloebe___RouteConverter.ImportControl();
 			this.leftMenu.SuspendLayout();
 			this.header.SuspendLayout();
 			this.mainPanel.SuspendLayout();
@@ -141,6 +142,7 @@
 			// 
 			// mainPanel
 			// 
+			this.mainPanel.Controls.Add(this.importControl1);
 			this.mainPanel.Controls.Add(this.exportControl1);
 			this.mainPanel.Controls.Add(this.homeControl1);
 			this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -174,6 +176,13 @@
 			this.creator.TabIndex = 12;
 			this.creator.Text = "Designed by Dimidov";
 			// 
+			// importControl1
+			// 
+			this.importControl1.Location = new System.Drawing.Point(0, 0);
+			this.importControl1.Name = "importControl1";
+			this.importControl1.Size = new System.Drawing.Size(872, 552);
+			this.importControl1.TabIndex = 2;
+			// 
 			// EcdisForm
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -206,6 +215,7 @@
 		private System.Windows.Forms.Button btnExport;
 		private ExportControl exportControl1;
 		private System.Windows.Forms.Label creator;
+		private ImportControl importControl1;
 	}
 }
 
