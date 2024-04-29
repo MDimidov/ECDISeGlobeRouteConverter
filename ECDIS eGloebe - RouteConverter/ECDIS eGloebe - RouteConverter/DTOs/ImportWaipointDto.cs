@@ -29,6 +29,8 @@ namespace ECDIS_eGloebe___RouteConverter.DTOs
 		[XmlElement("timeZone")]
 		public int TimeZone { get; set; }
 
+		public double DistanceToGo { get; set; }
+
 		public double DistanceFromLastWp { get; set; }
 
 		public double Course { get; set; }

@@ -2,6 +2,8 @@
 using ECDIS_eGloebe___RouteConverter.Utilities;
 using System;
 using System.IO;
+using System.Linq;
+using System.Text;
 using System.Windows.Forms;
 
 namespace ECDIS_eGloebe___RouteConverter
@@ -28,6 +30,7 @@ namespace ECDIS_eGloebe___RouteConverter
 				.Deserialize<ImportRouteDto>(xmlStirng, "");
 
 			CalculateAllDistancesBetweenWp();
+			CalculateDistanceToGo();
 			;
 		}
 
@@ -81,6 +84,39 @@ namespace ECDIS_eGloebe___RouteConverter
 					routeDto.Waipoints[i - 1].Position,
 					routeDto.Waipoints[i].Position);
 			}
+		}
+
+		private void CalculateDistanceToGo()
+		{
+			double totalDistance = routeDto
+				.Waipoints
+				.Sum(w => w.DistanceFromLastWp);
+
+			foreach (var wp in routeDto.Waipoints)
+			{
+				totalDistance -= wp.DistanceFromLastWp;
+				wp.DistanceToGo = Math.Round(totalDistance, 1);
+			}
+		}
+
+		private void ExportRouteToFile()
+		{
+			StringBuilder sb = new StringBuilder();
+
+			int cnter = 0;
+			foreach (var wp in routeDto.Waipoints)
+			{
+				string text = $"{++cnter}. lat = {wp.Position.LatDegrees}° {wp.Position.LatMinutes.ToString("f1")}' {wp.Position.LatDir} / Long = {wp.Position.LongDegrees}° {wp.Position.LongMinutes.ToString("f1")}' {wp.Position.LongDir} / Course = {wp.Course}° / Distance = {wp.DistanceFromLastWp} n.mi. / Distance to go = {wp.DistanceToGo} / Notes = NIL";
+				sb.AppendLine(text);
+			}
+
+			File.WriteAllText("../../../routeExport.txt", sb.ToString());
+		}
+
+		private void btnExportRoute_Click(object sender, EventArgs e)
+		{
+			ExportRouteToFile();
+			MessageBox.Show($"You successfuly exported file dir: ../../../routeExport.txt");
 		}
 	}
 }
