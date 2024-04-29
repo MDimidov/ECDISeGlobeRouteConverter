@@ -23,6 +23,7 @@ namespace ECDIS_eGloebe___RouteConverter
 		private void ImportFromXml()
 		{
 			string xmlStirng = File.ReadAllText(GetProjectDirectory());
+			xmlStirng = xmlStirng.Replace("http://www.sevencs.com/eglobe/route", "");
 			routeDto = new XmlHelper()
 				.Deserialize<ImportRouteDto>(xmlStirng, "");
 
