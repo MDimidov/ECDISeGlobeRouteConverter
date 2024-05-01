@@ -103,6 +103,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ExportToWord.cs" />
     <Compile Include="Utilities\XmlHelper.cs" />
     <EmbeddedResource Include="ExportControl.resx">
       <DependentUpon>ExportControl.cs</DependentUpon>

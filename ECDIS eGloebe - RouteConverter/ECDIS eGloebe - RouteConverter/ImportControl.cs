@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using static ECDIS_eGloebe___RouteConverter.Services.ExportToWord;
 
 namespace ECDIS_eGloebe___RouteConverter
 {
@@ -115,7 +116,8 @@ namespace ECDIS_eGloebe___RouteConverter
 
 		private void btnExportRoute_Click(object sender, EventArgs e)
 		{
-			ExportRouteToFile();
+			//ExportRouteToFile();
+			ExportToWordDoc();
 			MessageBox.Show($"You successfuly exported file dir: ../../../routeExport.txt");
 		}
 	}
