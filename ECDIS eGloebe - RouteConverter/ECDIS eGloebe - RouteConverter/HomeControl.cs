@@ -8,6 +8,14 @@ namespace ECDIS_eGloebe___RouteConverter
 {
 	public partial class HomeControl : UserControl
 	{
+		OpenFileDialog openFileDialog = new OpenFileDialog()
+		{
+			Filter = "Ship info (*.xml)|*.xml|All files (*.*)|*.*",
+			FilterIndex = 1,
+			RestoreDirectory = true,
+		};
+
+
 		HomeInfoDto homeInfo = new HomeInfoDto();
 
 		public HomeControl()
@@ -80,9 +88,26 @@ namespace ECDIS_eGloebe___RouteConverter
 
 		private void ImportFromXml()
 		{
-			string xmlStirng= File.ReadAllText(GetProjectDirectory());
-			homeInfo = new XmlHelper()
-				.Deserialize<HomeInfoDto>(xmlStirng, "homeInfo");
+			if (openFileDialog.ShowDialog() == DialogResult.OK)
+			{
+				try
+				{
+					// Отваряне на избрания файл за четене
+					using (StreamReader sr = new StreamReader(openFileDialog.OpenFile()))
+					{
+						// Четене на съдържание от файла и извеждане на конзолата
+						string xmlStirng = sr.ReadToEnd();
+
+						homeInfo = new XmlHelper()
+							.Deserialize<HomeInfoDto>(xmlStirng, "homeInfo");
+					}
+				}
+				catch (Exception ex)
+				{
+					MessageBox.Show("Error while loading the file: " + ex.Message);
+				}
+			}
+			//string xmlStirng = File.ReadAllText(GetProjectDirectory());
 		}
 
 		private static string GetProjectDirectory()
@@ -92,6 +117,6 @@ namespace ECDIS_eGloebe___RouteConverter
 			return relativePath + "HomeInfo.xml";
 		}
 
-		
+
 	}
 }
