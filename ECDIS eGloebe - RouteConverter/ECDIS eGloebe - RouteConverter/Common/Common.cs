@@ -17,7 +17,7 @@ namespace ECDIS_eGloebe___RouteConverter.Common
 		public static void ExportToWordDoc()
 		{
 			Document doc = new Document();
-			DocumentBuilder builder = new DocumentBuilder(doc);
+			DocumentBuilder builder = new DocumentBuilder();
 
 			// Specify font formatting
 			Font font = builder.Font;
@@ -26,6 +26,8 @@ namespace ECDIS_eGloebe___RouteConverter.Common
 			font.Color = System.Drawing.Color.Black;
 			font.Name = "Arial";
 			font.Underline = Underline.Single;
+
+			builder.Document = doc;
 
 			// Insert text
 			builder.Writeln("This is the first page.");
@@ -59,6 +61,7 @@ namespace ECDIS_eGloebe___RouteConverter.Common
 
 			// Insert image
 			//builder.InsertImage("image.png");
+
 			// Insert page break 
 			builder.InsertBreak(BreakType.PageBreak);
 			// all the elements after page break will be inserted to next page.

@@ -143,8 +143,6 @@ namespace ECDIS_eGloebe___RouteConverter
 					MessageBox.Show("Error while loading the file: " + ex.Message);
 				}
 			}
-		}
-
-		
+		}		
 	}
 }
