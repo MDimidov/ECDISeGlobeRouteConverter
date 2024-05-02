@@ -15,6 +15,13 @@ namespace ECDIS_eGloebe___RouteConverter
 			RestoreDirectory = true,
 		};
 
+		SaveFileDialog saveFileDialog = new SaveFileDialog()
+		{
+			Filter = "Ship info (*.xml)|*.xml|All files (*.*)|*.*",
+			FilterIndex = 1,
+			RestoreDirectory = true,
+		};
+
 
 		HomeInfoDto homeInfo = new HomeInfoDto();
 
@@ -27,8 +34,9 @@ namespace ECDIS_eGloebe___RouteConverter
 		private void btnExportHomeInfo_Click(object sender, EventArgs e)
 		{
 			SetFormInfo();
-			File.WriteAllText(GetProjectDirectory(), ExportToStringXml());
-			MessageBox.Show($"You successfuly exported file dir: {GetProjectDirectory()}");
+			//File.WriteAllText(GetProjectDirectory(), ExportToStringXml());
+			ExportToStringXml();
+			//MessageBox.Show($"You successfuly exported file dir: {GetProjectDirectory()}");
 		}
 
 		private void btnImportHomeInfo_Click(object sender, EventArgs e)
@@ -81,9 +89,24 @@ namespace ECDIS_eGloebe___RouteConverter
 			tbDraftAft.Text = homeInfo.draftAFT.ToString("f1");
 		}
 
-		private string ExportToStringXml()
+		private void ExportToStringXml()
 		{
-			return new XmlHelper().Serialize(homeInfo, "homeInfo");
+			string homeInfoXml =  new XmlHelper().Serialize(homeInfo, "homeInfo");
+			if (saveFileDialog.ShowDialog() == DialogResult.OK)
+			{
+				try
+				{
+					using (StreamWriter sw = new StreamWriter(saveFileDialog.FileName))
+					{
+						sw.Write(homeInfoXml);
+					}
+					MessageBox.Show("Your file is succesfully saved");
+				}
+				catch (Exception ex)
+				{
+					MessageBox.Show("Eror while saving" + ex.Message);
+				}
+			}
 		}
 
 		private void ImportFromXml()
@@ -107,7 +130,6 @@ namespace ECDIS_eGloebe___RouteConverter
 					MessageBox.Show("Error while loading the file: " + ex.Message);
 				}
 			}
-			//string xmlStirng = File.ReadAllText(GetProjectDirectory());
 		}
 
 		private static string GetProjectDirectory()
