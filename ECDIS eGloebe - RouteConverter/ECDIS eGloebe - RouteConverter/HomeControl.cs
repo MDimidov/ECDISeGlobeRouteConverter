@@ -3,6 +3,7 @@ using ECDIS_eGloebe___RouteConverter.Utilities;
 using System;
 using System.IO;
 using System.Windows.Forms;
+using static ECDIS_eGloebe___RouteConverter.Common.Common;
 
 namespace ECDIS_eGloebe___RouteConverter
 {
@@ -23,20 +24,15 @@ namespace ECDIS_eGloebe___RouteConverter
 		};
 
 
-		HomeInfoDto homeInfo = new HomeInfoDto();
-
 		public HomeControl()
 		{
 			InitializeComponent();
 			ShowFormInfo();
 		}
 
-		private void btnExportHomeInfo_Click(object sender, EventArgs e)
+		private void btnConfirmHomeInfo_Click(object sender, EventArgs e)
 		{
 			SetFormInfo();
-			//File.WriteAllText(GetProjectDirectory(), ExportToStringXml());
-			ExportToStringXml();
-			//MessageBox.Show($"You successfuly exported file dir: {GetProjectDirectory()}");
 		}
 
 		private void btnImportHomeInfo_Click(object sender, EventArgs e)
@@ -45,20 +41,31 @@ namespace ECDIS_eGloebe___RouteConverter
 			ShowFormInfo();
 		}
 
+		private void btnExportHomeInfo_Click(object sender, EventArgs e)
+		{
+			SetFormInfo();
+			ExportToStringXml();
+		}
+
 		private void SetFormInfo()
 		{
-			homeInfo.MasterName = tbMaster.Text;
-			homeInfo.ChiefMateName = tbChiefMate.Text;
-			homeInfo.DelegateOfficerName = tbDelegateOfficer.Text;
-			homeInfo.WKO1Name = tbWKO1.Text;
-			homeInfo.WKO2Name = tbWKO2.Text;
-			homeInfo.VesselName = tbVessel.Text;
-			homeInfo.PortFrom = tbPortFrom.Text;
-			homeInfo.PortTo = tbPortTo.Text;
+			HomeInfo.MasterName = tbMaster.Text;
+			HomeInfo.ChiefMateName = tbChiefMate.Text;
+			HomeInfo.DelegateOfficerName = tbDelegateOfficer.Text;
+			HomeInfo.WKO1Name = tbWKO1.Text;
+			HomeInfo.WKO2Name = tbWKO2.Text;
+			HomeInfo.VesselName = tbVessel.Text;
+			HomeInfo.PortFrom = tbPortFrom.Text;
+			HomeInfo.PortTo = tbPortTo.Text;
+			HomeInfo.Voyage = tbVoyage.Text;
+			HomeInfo.SafetyCountDepth = tbSafetyContDepth.Text;
+			HomeInfo.Ets = tbEts.Text;
+			HomeInfo.Eta = tbEta.Text;
+			HomeInfo.CreationDate = dateOfCreatingRoute.MinDate;
 
 			if (double.TryParse(tbDraftFwd.Text, out double draftFwd))
 			{
-				homeInfo.draftFWD = draftFwd;
+				HomeInfo.draftFWD = draftFwd;
 			}
 			else
 			{
@@ -67,7 +74,7 @@ namespace ECDIS_eGloebe___RouteConverter
 
 			if (double.TryParse(tbDraftAft.Text, out double draftAft))
 			{
-				homeInfo.draftAFT = draftAft;
+				HomeInfo.draftAFT = draftAft;
 			}
 			else
 			{
@@ -77,21 +84,26 @@ namespace ECDIS_eGloebe___RouteConverter
 
 		private void ShowFormInfo()
 		{
-			tbMaster.Text = homeInfo.MasterName;
-			tbChiefMate.Text = homeInfo.ChiefMateName;
-			tbDelegateOfficer.Text = homeInfo.DelegateOfficerName;
-			tbWKO1.Text = homeInfo.WKO1Name;
-			tbWKO2.Text = homeInfo.WKO2Name;
-			tbVessel.Text = homeInfo.VesselName;
-			tbPortFrom.Text = homeInfo.PortFrom;
-			tbPortTo.Text = homeInfo.PortTo;
-			tbDraftFwd.Text = homeInfo.draftFWD.ToString("f1");
-			tbDraftAft.Text = homeInfo.draftAFT.ToString("f1");
+			tbMaster.Text = HomeInfo.MasterName;
+			tbChiefMate.Text = HomeInfo.ChiefMateName;
+			tbDelegateOfficer.Text = HomeInfo.DelegateOfficerName;
+			tbWKO1.Text = HomeInfo.WKO1Name;
+			tbWKO2.Text = HomeInfo.WKO2Name;
+			tbVessel.Text = HomeInfo.VesselName;
+			tbPortFrom.Text = HomeInfo.PortFrom;
+			tbPortTo.Text = HomeInfo.PortTo;
+			tbVoyage.Text = HomeInfo.Voyage;
+			tbSafetyContDepth.Text = HomeInfo.SafetyCountDepth;
+			tbEts.Text = HomeInfo.Ets;
+			tbEta.Text = HomeInfo.Eta;
+			//Skip show creation date
+			tbDraftFwd.Text = HomeInfo.draftFWD.ToString("f1");
+			tbDraftAft.Text = HomeInfo.draftAFT.ToString("f1");
 		}
 
 		private void ExportToStringXml()
 		{
-			string homeInfoXml =  new XmlHelper().Serialize(homeInfo, "homeInfo");
+			string homeInfoXml = new XmlHelper().Serialize(HomeInfo, "homeInfo");
 			if (saveFileDialog.ShowDialog() == DialogResult.OK)
 			{
 				try
@@ -100,6 +112,7 @@ namespace ECDIS_eGloebe___RouteConverter
 					{
 						sw.Write(homeInfoXml);
 					}
+
 					MessageBox.Show("Your file is succesfully saved");
 				}
 				catch (Exception ex)
@@ -121,7 +134,7 @@ namespace ECDIS_eGloebe___RouteConverter
 						// Четене на съдържание от файла и извеждане на конзолата
 						string xmlStirng = sr.ReadToEnd();
 
-						homeInfo = new XmlHelper()
+						HomeInfo = new XmlHelper()
 							.Deserialize<HomeInfoDto>(xmlStirng, "homeInfo");
 					}
 				}
@@ -132,13 +145,6 @@ namespace ECDIS_eGloebe___RouteConverter
 			}
 		}
 
-		private static string GetProjectDirectory()
-		{
-			string relativePath = @"../../../";
-
-			return relativePath + "HomeInfo.xml";
-		}
-
-
+		
 	}
 }

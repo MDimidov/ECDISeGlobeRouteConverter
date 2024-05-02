@@ -3,11 +3,15 @@ using Aspose.Words;
 using System.IO;
 using System.Windows.Forms;
 using System;
+using ECDIS_eGloebe___RouteConverter.DTOs;
 
-namespace ECDIS_eGloebe___RouteConverter.Services
+namespace ECDIS_eGloebe___RouteConverter.Common
 {
-	public static class ExportToWord
+	public static class Common
 	{
+		public static HomeInfoDto HomeInfo = new HomeInfoDto();
+
+
 		public static void ExportToWordDoc()
 		{
 			Document doc = new Document();
@@ -81,7 +85,7 @@ namespace ECDIS_eGloebe___RouteConverter.Services
 					MessageBox.Show("Eror while saving" + ex.Message);
 				}
 			}
-			
+
 		}
 	}
 }

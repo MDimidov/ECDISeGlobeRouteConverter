@@ -39,11 +39,9 @@
 			this.tbWKO2 = new System.Windows.Forms.TextBox();
 			this.lbWKO2 = new System.Windows.Forms.Label();
 			this.tbDraftAft = new System.Windows.Forms.TextBox();
-			this.label4 = new System.Windows.Forms.Label();
+			this.DraftAft = new System.Windows.Forms.Label();
 			this.tbDraftFwd = new System.Windows.Forms.TextBox();
-			this.label6 = new System.Windows.Forms.Label();
-			this.textBox1 = new System.Windows.Forms.TextBox();
-			this.label1 = new System.Windows.Forms.Label();
+			this.lbDraftFwd = new System.Windows.Forms.Label();
 			this.tbPortTo = new System.Windows.Forms.TextBox();
 			this.lbPortTo = new System.Windows.Forms.Label();
 			this.tbPortFrom = new System.Windows.Forms.TextBox();
@@ -52,6 +50,17 @@
 			this.lbVessel = new System.Windows.Forms.Label();
 			this.btnExportHomeInfo = new System.Windows.Forms.Button();
 			this.btnImportHomeInfo = new System.Windows.Forms.Button();
+			this.lbEts = new System.Windows.Forms.Label();
+			this.tbEts = new System.Windows.Forms.TextBox();
+			this.tbSafetyContDepth = new System.Windows.Forms.TextBox();
+			this.lbSafetyContDepth = new System.Windows.Forms.Label();
+			this.tbVoyage = new System.Windows.Forms.TextBox();
+			this.lbVoyage = new System.Windows.Forms.Label();
+			this.tbEta = new System.Windows.Forms.TextBox();
+			this.lbEta = new System.Windows.Forms.Label();
+			this.dateOfCreatingRoute = new System.Windows.Forms.DateTimePicker();
+			this.lbDateOfCreatingRoute = new System.Windows.Forms.Label();
+			this.btnConfirmHomeInfo = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// lbMaster
@@ -157,16 +166,16 @@
 			this.tbDraftAft.Size = new System.Drawing.Size(129, 31);
 			this.tbDraftAft.TabIndex = 26;
 			// 
-			// label4
+			// DraftAft
 			// 
-			this.label4.AutoSize = true;
-			this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-			this.label4.Location = new System.Drawing.Point(22, 368);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(53, 16);
-			this.label4.TabIndex = 25;
-			this.label4.Text = "Draft AFT";
+			this.DraftAft.AutoSize = true;
+			this.DraftAft.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.DraftAft.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+			this.DraftAft.Location = new System.Drawing.Point(22, 368);
+			this.DraftAft.Name = "DraftAft";
+			this.DraftAft.Size = new System.Drawing.Size(53, 16);
+			this.DraftAft.TabIndex = 25;
+			this.DraftAft.Text = "Draft AFT";
 			// 
 			// tbDraftFwd
 			// 
@@ -176,35 +185,16 @@
 			this.tbDraftFwd.Size = new System.Drawing.Size(129, 31);
 			this.tbDraftFwd.TabIndex = 24;
 			// 
-			// label6
+			// lbDraftFwd
 			// 
-			this.label6.AutoSize = true;
-			this.label6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-			this.label6.Location = new System.Drawing.Point(22, 313);
-			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(60, 16);
-			this.label6.TabIndex = 23;
-			this.label6.Text = "Draft FWD";
-			// 
-			// textBox1
-			// 
-			this.textBox1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.textBox1.Location = new System.Drawing.Point(502, 203);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(331, 31);
-			this.textBox1.TabIndex = 34;
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-			this.label1.Location = new System.Drawing.Point(499, 187);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(77, 16);
-			this.label1.TabIndex = 33;
-			this.label1.Text = "WKO1 Name";
+			this.lbDraftFwd.AutoSize = true;
+			this.lbDraftFwd.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.lbDraftFwd.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+			this.lbDraftFwd.Location = new System.Drawing.Point(22, 313);
+			this.lbDraftFwd.Name = "lbDraftFwd";
+			this.lbDraftFwd.Size = new System.Drawing.Size(60, 16);
+			this.lbDraftFwd.TabIndex = 23;
+			this.lbDraftFwd.Text = "Draft FWD";
 			// 
 			// tbPortTo
 			// 
@@ -265,7 +255,7 @@
 			// 
 			// btnExportHomeInfo
 			// 
-			this.btnExportHomeInfo.Location = new System.Drawing.Point(587, 459);
+			this.btnExportHomeInfo.Location = new System.Drawing.Point(573, 460);
 			this.btnExportHomeInfo.Name = "btnExportHomeInfo";
 			this.btnExportHomeInfo.Size = new System.Drawing.Size(245, 69);
 			this.btnExportHomeInfo.TabIndex = 35;
@@ -275,7 +265,7 @@
 			// 
 			// btnImportHomeInfo
 			// 
-			this.btnImportHomeInfo.Location = new System.Drawing.Point(331, 459);
+			this.btnImportHomeInfo.Location = new System.Drawing.Point(313, 460);
 			this.btnImportHomeInfo.Name = "btnImportHomeInfo";
 			this.btnImportHomeInfo.Size = new System.Drawing.Size(245, 69);
 			this.btnImportHomeInfo.TabIndex = 36;
@@ -283,14 +273,130 @@
 			this.btnImportHomeInfo.UseVisualStyleBackColor = true;
 			this.btnImportHomeInfo.Click += new System.EventHandler(this.btnImportHomeInfo_Click);
 			// 
+			// lbEts
+			// 
+			this.lbEts.AutoSize = true;
+			this.lbEts.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.lbEts.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+			this.lbEts.Location = new System.Drawing.Point(499, 187);
+			this.lbEts.Name = "lbEts";
+			this.lbEts.Size = new System.Drawing.Size(24, 16);
+			this.lbEts.TabIndex = 33;
+			this.lbEts.Text = "ETS";
+			// 
+			// tbEts
+			// 
+			this.tbEts.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.tbEts.Location = new System.Drawing.Point(502, 203);
+			this.tbEts.Name = "tbEts";
+			this.tbEts.Size = new System.Drawing.Size(259, 31);
+			this.tbEts.TabIndex = 34;
+			// 
+			// tbSafetyContDepth
+			// 
+			this.tbSafetyContDepth.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.tbSafetyContDepth.Location = new System.Drawing.Point(192, 384);
+			this.tbSafetyContDepth.Name = "tbSafetyContDepth";
+			this.tbSafetyContDepth.Size = new System.Drawing.Size(164, 31);
+			this.tbSafetyContDepth.TabIndex = 40;
+			// 
+			// lbSafetyContDepth
+			// 
+			this.lbSafetyContDepth.AutoSize = true;
+			this.lbSafetyContDepth.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.lbSafetyContDepth.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+			this.lbSafetyContDepth.Location = new System.Drawing.Point(189, 368);
+			this.lbSafetyContDepth.Name = "lbSafetyContDepth";
+			this.lbSafetyContDepth.Size = new System.Drawing.Size(162, 16);
+			this.lbSafetyContDepth.TabIndex = 39;
+			this.lbSafetyContDepth.Text = "Safety contour/Safety depth";
+			// 
+			// tbVoyage
+			// 
+			this.tbVoyage.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.tbVoyage.Location = new System.Drawing.Point(192, 329);
+			this.tbVoyage.Name = "tbVoyage";
+			this.tbVoyage.Size = new System.Drawing.Size(164, 31);
+			this.tbVoyage.TabIndex = 38;
+			// 
+			// lbVoyage
+			// 
+			this.lbVoyage.AutoSize = true;
+			this.lbVoyage.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.lbVoyage.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+			this.lbVoyage.Location = new System.Drawing.Point(189, 313);
+			this.lbVoyage.Name = "lbVoyage";
+			this.lbVoyage.Size = new System.Drawing.Size(64, 16);
+			this.lbVoyage.TabIndex = 37;
+			this.lbVoyage.Text = "Voyage №";
+			// 
+			// tbEta
+			// 
+			this.tbEta.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.tbEta.Location = new System.Drawing.Point(502, 258);
+			this.tbEta.Name = "tbEta";
+			this.tbEta.Size = new System.Drawing.Size(259, 31);
+			this.tbEta.TabIndex = 42;
+			// 
+			// lbEta
+			// 
+			this.lbEta.AutoSize = true;
+			this.lbEta.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.lbEta.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+			this.lbEta.Location = new System.Drawing.Point(499, 242);
+			this.lbEta.Name = "lbEta";
+			this.lbEta.Size = new System.Drawing.Size(25, 16);
+			this.lbEta.TabIndex = 41;
+			this.lbEta.Text = "ETA";
+			// 
+			// dateOfCreatingRoute
+			// 
+			this.dateOfCreatingRoute.CalendarForeColor = System.Drawing.SystemColors.WindowText;
+			this.dateOfCreatingRoute.Font = new System.Drawing.Font("Century Gothic", 14.25F);
+			this.dateOfCreatingRoute.Location = new System.Drawing.Point(502, 329);
+			this.dateOfCreatingRoute.Name = "dateOfCreatingRoute";
+			this.dateOfCreatingRoute.Size = new System.Drawing.Size(200, 31);
+			this.dateOfCreatingRoute.TabIndex = 43;
+			this.dateOfCreatingRoute.Value = new System.DateTime(2024, 5, 2, 17, 59, 39, 0);
+			// 
+			// lbDateOfCreatingRoute
+			// 
+			this.lbDateOfCreatingRoute.AutoSize = true;
+			this.lbDateOfCreatingRoute.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.lbDateOfCreatingRoute.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+			this.lbDateOfCreatingRoute.Location = new System.Drawing.Point(499, 313);
+			this.lbDateOfCreatingRoute.Name = "lbDateOfCreatingRoute";
+			this.lbDateOfCreatingRoute.Size = new System.Drawing.Size(130, 16);
+			this.lbDateOfCreatingRoute.TabIndex = 44;
+			this.lbDateOfCreatingRoute.Text = "Date of creating Route";
+			// 
+			// btnConfirmHomeInfo
+			// 
+			this.btnConfirmHomeInfo.Location = new System.Drawing.Point(53, 460);
+			this.btnConfirmHomeInfo.Name = "btnConfirmHomeInfo";
+			this.btnConfirmHomeInfo.Size = new System.Drawing.Size(245, 69);
+			this.btnConfirmHomeInfo.TabIndex = 45;
+			this.btnConfirmHomeInfo.Text = "Confirm info";
+			this.btnConfirmHomeInfo.UseVisualStyleBackColor = true;
+			this.btnConfirmHomeInfo.Click += new System.EventHandler(this.btnConfirmHomeInfo_Click);
+			// 
 			// HomeControl
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.btnConfirmHomeInfo);
+			this.Controls.Add(this.lbDateOfCreatingRoute);
+			this.Controls.Add(this.dateOfCreatingRoute);
+			this.Controls.Add(this.tbEta);
+			this.Controls.Add(this.lbEta);
+			this.Controls.Add(this.tbSafetyContDepth);
+			this.Controls.Add(this.lbSafetyContDepth);
+			this.Controls.Add(this.tbVoyage);
+			this.Controls.Add(this.lbVoyage);
 			this.Controls.Add(this.btnImportHomeInfo);
 			this.Controls.Add(this.btnExportHomeInfo);
-			this.Controls.Add(this.textBox1);
-			this.Controls.Add(this.label1);
+			this.Controls.Add(this.tbEts);
+			this.Controls.Add(this.lbEts);
 			this.Controls.Add(this.tbPortTo);
 			this.Controls.Add(this.lbPortTo);
 			this.Controls.Add(this.tbPortFrom);
@@ -298,9 +404,9 @@
 			this.Controls.Add(this.tbVessel);
 			this.Controls.Add(this.lbVessel);
 			this.Controls.Add(this.tbDraftAft);
-			this.Controls.Add(this.label4);
+			this.Controls.Add(this.DraftAft);
 			this.Controls.Add(this.tbDraftFwd);
-			this.Controls.Add(this.label6);
+			this.Controls.Add(this.lbDraftFwd);
 			this.Controls.Add(this.tbWKO2);
 			this.Controls.Add(this.lbWKO2);
 			this.Controls.Add(this.tbWKO1);
@@ -331,11 +437,9 @@
 		private System.Windows.Forms.TextBox tbWKO2;
 		private System.Windows.Forms.Label lbWKO2;
 		private System.Windows.Forms.TextBox tbDraftAft;
-		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.Label DraftAft;
 		private System.Windows.Forms.TextBox tbDraftFwd;
-		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.TextBox textBox1;
-		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label lbDraftFwd;
 		private System.Windows.Forms.TextBox tbPortTo;
 		private System.Windows.Forms.Label lbPortTo;
 		private System.Windows.Forms.TextBox tbPortFrom;
@@ -344,5 +448,16 @@
 		private System.Windows.Forms.Label lbVessel;
 		private System.Windows.Forms.Button btnExportHomeInfo;
 		private System.Windows.Forms.Button btnImportHomeInfo;
+		private System.Windows.Forms.Label lbEts;
+		private System.Windows.Forms.TextBox tbEts;
+		private System.Windows.Forms.TextBox tbSafetyContDepth;
+		private System.Windows.Forms.Label lbSafetyContDepth;
+		private System.Windows.Forms.TextBox tbVoyage;
+		private System.Windows.Forms.Label lbVoyage;
+		private System.Windows.Forms.TextBox tbEta;
+		private System.Windows.Forms.Label lbEta;
+		private System.Windows.Forms.DateTimePicker dateOfCreatingRoute;
+		private System.Windows.Forms.Label lbDateOfCreatingRoute;
+		private System.Windows.Forms.Button btnConfirmHomeInfo;
 	}
 }

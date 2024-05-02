@@ -1,9 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.Xml.Serialization;
 
 namespace ECDIS_eGloebe___RouteConverter.DTOs
 {
-	[XmlRoot("homeInfo")]
+	[XmlRoot("HomeInfo")]
 	public class HomeInfoDto
 	{
 		public HomeInfoDto()
@@ -36,6 +37,12 @@ namespace ECDIS_eGloebe___RouteConverter.DTOs
 		[XmlElement(nameof(PortTo))]
 		public string PortTo { get; set; }
 
+		[XmlElement(nameof(Ets))]
+		public string Ets { get; set; }
+
+		[XmlElement(nameof(Eta))]
+		public string Eta { get; set; }
+
 		[Range(0.1, 30.0)]
 		[XmlElement(nameof(draftFWD))]
 		public double draftFWD { get; set; }
@@ -45,6 +52,14 @@ namespace ECDIS_eGloebe___RouteConverter.DTOs
 		public double draftAFT { get; set; }
 
 		public double draftMiddle => (draftFWD * draftAFT) / 2;
+
+		[XmlElement(nameof(Voyage))]
+		public string Voyage { get; set; }
+
+		[XmlElement(nameof(SafetyCountDepth))]
+		public string SafetyCountDepth { get; set; }
+
+		public DateTime CreationDate { get; set;}
 
 	}
 }

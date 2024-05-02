@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using static ECDIS_eGloebe___RouteConverter.Services.ExportToWord;
+using static ECDIS_eGloebe___RouteConverter.Common.Common;
 
 namespace ECDIS_eGloebe___RouteConverter
 {
@@ -32,7 +32,6 @@ namespace ECDIS_eGloebe___RouteConverter
 
 			CalculateAllDistancesBetweenWp();
 			CalculateDistanceToGo();
-			;
 		}
 
 		private static string GetProjectDirectory()
@@ -100,25 +99,24 @@ namespace ECDIS_eGloebe___RouteConverter
 			}
 		}
 
-		private void ExportRouteToFile()
-		{
-			StringBuilder sb = new StringBuilder();
-
-			int cnter = 0;
-			foreach (var wp in routeDto.Waipoints)
-			{
-				string text = $"{++cnter}. lat = {wp.Position.LatDegrees}° {wp.Position.LatMinutes.ToString("f1")}' {wp.Position.LatDir} / Long = {wp.Position.LongDegrees}° {wp.Position.LongMinutes.ToString("f1")}' {wp.Position.LongDir} / Course = {wp.Course}° / Distance = {wp.DistanceFromLastWp} n.mi. / Distance to go = {wp.DistanceToGo} / Notes = NIL";
-				sb.AppendLine(text);
-			}
-
-			File.WriteAllText("../../../routeExport.txt", sb.ToString());
-		}
-
 		private void btnExportRoute_Click(object sender, EventArgs e)
 		{
-			//ExportRouteToFile();
 			ExportToWordDoc();
-			MessageBox.Show($"You successfuly exported file dir: ../../../routeExport.txt");
 		}
+
+		//private void ExportRouteToFile()
+		//{
+		//	StringBuilder sb = new StringBuilder();
+
+		//	int cnter = 0;
+		//	foreach (var wp in routeDto.Waipoints)
+		//	{
+		//		string text = $"{++cnter}. lat = {wp.Position.LatDegrees}° {wp.Position.LatMinutes.ToString("f1")}' {wp.Position.LatDir} / Long = {wp.Position.LongDegrees}° {wp.Position.LongMinutes.ToString("f1")}' {wp.Position.LongDir} / Course = {wp.Course}° / Distance = {wp.DistanceFromLastWp} n.mi. / Distance to go = {wp.DistanceToGo} / Notes = NIL";
+		//		sb.AppendLine(text);
+		//	}
+
+		//	File.WriteAllText("../../../routeExport.txt", sb.ToString());
+		//}
+
 	}
 }
