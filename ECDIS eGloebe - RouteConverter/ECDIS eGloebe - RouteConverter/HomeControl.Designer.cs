@@ -199,7 +199,7 @@
 			// tbPortTo
 			// 
 			this.tbPortTo.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.tbPortTo.Location = new System.Drawing.Point(502, 148);
+			this.tbPortTo.Location = new System.Drawing.Point(517, 148);
 			this.tbPortTo.Name = "tbPortTo";
 			this.tbPortTo.Size = new System.Drawing.Size(331, 31);
 			this.tbPortTo.TabIndex = 32;
@@ -209,7 +209,7 @@
 			this.lbPortTo.AutoSize = true;
 			this.lbPortTo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.lbPortTo.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-			this.lbPortTo.Location = new System.Drawing.Point(499, 132);
+			this.lbPortTo.Location = new System.Drawing.Point(514, 132);
 			this.lbPortTo.Name = "lbPortTo";
 			this.lbPortTo.Size = new System.Drawing.Size(43, 16);
 			this.lbPortTo.TabIndex = 31;
@@ -218,7 +218,7 @@
 			// tbPortFrom
 			// 
 			this.tbPortFrom.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.tbPortFrom.Location = new System.Drawing.Point(502, 93);
+			this.tbPortFrom.Location = new System.Drawing.Point(517, 93);
 			this.tbPortFrom.Name = "tbPortFrom";
 			this.tbPortFrom.Size = new System.Drawing.Size(331, 31);
 			this.tbPortFrom.TabIndex = 30;
@@ -228,7 +228,7 @@
 			this.lbPortFrom.AutoSize = true;
 			this.lbPortFrom.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.lbPortFrom.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-			this.lbPortFrom.Location = new System.Drawing.Point(499, 77);
+			this.lbPortFrom.Location = new System.Drawing.Point(514, 77);
 			this.lbPortFrom.Name = "lbPortFrom";
 			this.lbPortFrom.Size = new System.Drawing.Size(56, 16);
 			this.lbPortFrom.TabIndex = 29;
@@ -237,7 +237,7 @@
 			// tbVessel
 			// 
 			this.tbVessel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.tbVessel.Location = new System.Drawing.Point(502, 38);
+			this.tbVessel.Location = new System.Drawing.Point(517, 38);
 			this.tbVessel.Name = "tbVessel";
 			this.tbVessel.Size = new System.Drawing.Size(331, 31);
 			this.tbVessel.TabIndex = 28;
@@ -247,7 +247,7 @@
 			this.lbVessel.AutoSize = true;
 			this.lbVessel.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.lbVessel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-			this.lbVessel.Location = new System.Drawing.Point(499, 22);
+			this.lbVessel.Location = new System.Drawing.Point(514, 22);
 			this.lbVessel.Name = "lbVessel";
 			this.lbVessel.Size = new System.Drawing.Size(74, 16);
 			this.lbVessel.TabIndex = 27;
@@ -255,7 +255,7 @@
 			// 
 			// btnExportHomeInfo
 			// 
-			this.btnExportHomeInfo.Location = new System.Drawing.Point(573, 460);
+			this.btnExportHomeInfo.Location = new System.Drawing.Point(603, 460);
 			this.btnExportHomeInfo.Name = "btnExportHomeInfo";
 			this.btnExportHomeInfo.Size = new System.Drawing.Size(245, 69);
 			this.btnExportHomeInfo.TabIndex = 35;
@@ -265,7 +265,7 @@
 			// 
 			// btnImportHomeInfo
 			// 
-			this.btnImportHomeInfo.Location = new System.Drawing.Point(313, 460);
+			this.btnImportHomeInfo.Location = new System.Drawing.Point(314, 460);
 			this.btnImportHomeInfo.Name = "btnImportHomeInfo";
 			this.btnImportHomeInfo.Size = new System.Drawing.Size(245, 69);
 			this.btnImportHomeInfo.TabIndex = 36;
@@ -278,7 +278,7 @@
 			this.lbEts.AutoSize = true;
 			this.lbEts.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.lbEts.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-			this.lbEts.Location = new System.Drawing.Point(499, 187);
+			this.lbEts.Location = new System.Drawing.Point(514, 187);
 			this.lbEts.Name = "lbEts";
 			this.lbEts.Size = new System.Drawing.Size(24, 16);
 			this.lbEts.TabIndex = 33;
@@ -287,7 +287,7 @@
 			// tbEts
 			// 
 			this.tbEts.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.tbEts.Location = new System.Drawing.Point(502, 203);
+			this.tbEts.Location = new System.Drawing.Point(517, 203);
 			this.tbEts.Name = "tbEts";
 			this.tbEts.Size = new System.Drawing.Size(259, 31);
 			this.tbEts.TabIndex = 34;
@@ -333,7 +333,7 @@
 			// tbEta
 			// 
 			this.tbEta.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.tbEta.Location = new System.Drawing.Point(502, 258);
+			this.tbEta.Location = new System.Drawing.Point(517, 258);
 			this.tbEta.Name = "tbEta";
 			this.tbEta.Size = new System.Drawing.Size(259, 31);
 			this.tbEta.TabIndex = 42;
@@ -343,7 +343,7 @@
 			this.lbEta.AutoSize = true;
 			this.lbEta.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.lbEta.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-			this.lbEta.Location = new System.Drawing.Point(499, 242);
+			this.lbEta.Location = new System.Drawing.Point(514, 242);
 			this.lbEta.Name = "lbEta";
 			this.lbEta.Size = new System.Drawing.Size(25, 16);
 			this.lbEta.TabIndex = 41;
@@ -353,7 +353,7 @@
 			// 
 			this.dateOfCreatingRoute.CalendarForeColor = System.Drawing.SystemColors.WindowText;
 			this.dateOfCreatingRoute.Font = new System.Drawing.Font("Century Gothic", 14.25F);
-			this.dateOfCreatingRoute.Location = new System.Drawing.Point(502, 329);
+			this.dateOfCreatingRoute.Location = new System.Drawing.Point(517, 329);
 			this.dateOfCreatingRoute.Name = "dateOfCreatingRoute";
 			this.dateOfCreatingRoute.Size = new System.Drawing.Size(200, 31);
 			this.dateOfCreatingRoute.TabIndex = 43;
@@ -364,7 +364,7 @@
 			this.lbDateOfCreatingRoute.AutoSize = true;
 			this.lbDateOfCreatingRoute.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.lbDateOfCreatingRoute.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-			this.lbDateOfCreatingRoute.Location = new System.Drawing.Point(499, 313);
+			this.lbDateOfCreatingRoute.Location = new System.Drawing.Point(514, 313);
 			this.lbDateOfCreatingRoute.Name = "lbDateOfCreatingRoute";
 			this.lbDateOfCreatingRoute.Size = new System.Drawing.Size(130, 16);
 			this.lbDateOfCreatingRoute.TabIndex = 44;
@@ -372,7 +372,7 @@
 			// 
 			// btnConfirmHomeInfo
 			// 
-			this.btnConfirmHomeInfo.Location = new System.Drawing.Point(53, 460);
+			this.btnConfirmHomeInfo.Location = new System.Drawing.Point(25, 460);
 			this.btnConfirmHomeInfo.Name = "btnConfirmHomeInfo";
 			this.btnConfirmHomeInfo.Size = new System.Drawing.Size(245, 69);
 			this.btnConfirmHomeInfo.TabIndex = 45;
