@@ -11,6 +11,8 @@ namespace ECDIS_eGloebe___RouteConverter.Common
 	{
 		public static HomeInfoDto HomeInfo = new HomeInfoDto();
 
+		public static ImportRouteDto RouteDto = new ImportRouteDto();
+
 
 		public static void ExportToWordDoc()
 		{

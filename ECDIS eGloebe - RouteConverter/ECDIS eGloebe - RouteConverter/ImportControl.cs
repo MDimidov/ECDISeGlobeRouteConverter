@@ -3,7 +3,6 @@ using ECDIS_eGloebe___RouteConverter.Utilities;
 using System;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using static ECDIS_eGloebe___RouteConverter.Common.Common;
 
@@ -11,7 +10,12 @@ namespace ECDIS_eGloebe___RouteConverter
 {
 	public partial class ImportControl : UserControl
 	{
-		ImportRouteDto routeDto = new ImportRouteDto();
+		OpenFileDialog openFileDialog = new OpenFileDialog()
+		{
+			Filter = "ECDIS Route file (*.rte)|*.rte|All files (*.*)|*.*",
+			FilterIndex = 1,
+			RestoreDirectory = true,
+		};
 
 		public ImportControl()
 		{
@@ -25,13 +29,30 @@ namespace ECDIS_eGloebe___RouteConverter
 
 		private void ImportFromXml()
 		{
-			string xmlStirng = File.ReadAllText(GetProjectDirectory());
-			xmlStirng = xmlStirng.Replace("http://www.sevencs.com/eglobe/route", "");
-			routeDto = new XmlHelper()
-				.Deserialize<ImportRouteDto>(xmlStirng, "");
+			if (openFileDialog.ShowDialog() == DialogResult.OK)
+			{
+				try
+				{
+					// Отваряне на избрания файл за четене
+					using (StreamReader sr = new StreamReader(openFileDialog.OpenFile()))
+					{
+						// Четене на съдържание от файла и извеждане на конзолата
+						string xmlStirng = sr.ReadToEnd();
 
-			CalculateAllDistancesBetweenWp();
-			CalculateDistanceToGo();
+						xmlStirng = xmlStirng.Replace("http://www.sevencs.com/eglobe/route", "");
+						RouteDto = new XmlHelper()
+							.Deserialize<ImportRouteDto>(xmlStirng, "");
+					}
+
+					CalculateAllDistancesBetweenWp();
+					CalculateDistanceToGo();
+					MessageBox.Show($"You import route {openFileDialog.FileName} successfuly");
+				}
+				catch (Exception ex)
+				{
+					MessageBox.Show("Error while loading the file: " + ex.Message);
+				}
+			}
 		}
 
 		private static string GetProjectDirectory()
@@ -77,22 +98,22 @@ namespace ECDIS_eGloebe___RouteConverter
 
 		private void CalculateAllDistancesBetweenWp()
 		{
-			for (int i = 1; i < routeDto.Waipoints.Length; i++)
+			for (int i = 1; i < RouteDto.Waipoints.Length; i++)
 			{
-				(routeDto.Waipoints[i].Course, routeDto.Waipoints[i].DistanceFromLastWp) =
+				(RouteDto.Waipoints[i].Course, RouteDto.Waipoints[i].DistanceFromLastWp) =
 					GetDistanceFromLastWp(
-					routeDto.Waipoints[i - 1].Position,
-					routeDto.Waipoints[i].Position);
+					RouteDto.Waipoints[i - 1].Position,
+					RouteDto.Waipoints[i].Position);
 			}
 		}
 
 		private void CalculateDistanceToGo()
 		{
-			double totalDistance = routeDto
+			double totalDistance = RouteDto
 				.Waipoints
 				.Sum(w => w.DistanceFromLastWp);
 
-			foreach (var wp in routeDto.Waipoints)
+			foreach (var wp in RouteDto.Waipoints)
 			{
 				totalDistance -= wp.DistanceFromLastWp;
 				wp.DistanceToGo = Math.Round(totalDistance, 1);
@@ -109,7 +130,7 @@ namespace ECDIS_eGloebe___RouteConverter
 		//	StringBuilder sb = new StringBuilder();
 
 		//	int cnter = 0;
-		//	foreach (var wp in routeDto.Waipoints)
+		//	foreach (var wp in RouteDto.Waipoints)
 		//	{
 		//		string text = $"{++cnter}. lat = {wp.Position.LatDegrees}° {wp.Position.LatMinutes.ToString("f1")}' {wp.Position.LatDir} / Long = {wp.Position.LongDegrees}° {wp.Position.LongMinutes.ToString("f1")}' {wp.Position.LongDir} / Course = {wp.Course}° / Distance = {wp.DistanceFromLastWp} n.mi. / Distance to go = {wp.DistanceToGo} / Notes = NIL";
 		//		sb.AppendLine(text);
