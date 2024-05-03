@@ -28,7 +28,9 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EcdisForm));
 			this.leftMenu = new System.Windows.Forms.Panel();
+			this.creator = new System.Windows.Forms.Label();
 			this.sidePanel = new System.Windows.Forms.Panel();
 			this.btnImport = new System.Windows.Forms.Button();
 			this.btnHome = new System.Windows.Forms.Button();
@@ -36,10 +38,9 @@
 			this.header = new System.Windows.Forms.Panel();
 			this.btnExit = new System.Windows.Forms.Button();
 			this.mainPanel = new System.Windows.Forms.Panel();
+			this.importControl1 = new ECDIS_eGloebe___RouteConverter.ImportControl();
 			this.exportControl1 = new ECDIS_eGloebe___RouteConverter.ExportControl();
 			this.homeControl1 = new ECDIS_eGloebe___RouteConverter.HomeControl();
-			this.creator = new System.Windows.Forms.Label();
-			this.importControl1 = new ECDIS_eGloebe___RouteConverter.ImportControl();
 			this.leftMenu.SuspendLayout();
 			this.header.SuspendLayout();
 			this.mainPanel.SuspendLayout();
@@ -58,6 +59,17 @@
 			this.leftMenu.Name = "leftMenu";
 			this.leftMenu.Size = new System.Drawing.Size(191, 584);
 			this.leftMenu.TabIndex = 9;
+			// 
+			// creator
+			// 
+			this.creator.AutoSize = true;
+			this.creator.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.creator.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+			this.creator.Location = new System.Drawing.Point(3, 566);
+			this.creator.Name = "creator";
+			this.creator.Size = new System.Drawing.Size(116, 15);
+			this.creator.TabIndex = 12;
+			this.creator.Text = "Designed by Dimidov";
 			// 
 			// sidePanel
 			// 
@@ -151,6 +163,13 @@
 			this.mainPanel.Size = new System.Drawing.Size(872, 552);
 			this.mainPanel.TabIndex = 11;
 			// 
+			// importControl1
+			// 
+			this.importControl1.Location = new System.Drawing.Point(0, 0);
+			this.importControl1.Name = "importControl1";
+			this.importControl1.Size = new System.Drawing.Size(872, 552);
+			this.importControl1.TabIndex = 2;
+			// 
 			// exportControl1
 			// 
 			this.exportControl1.Location = new System.Drawing.Point(0, 0);
@@ -165,24 +184,6 @@
 			this.homeControl1.Size = new System.Drawing.Size(870, 550);
 			this.homeControl1.TabIndex = 0;
 			// 
-			// creator
-			// 
-			this.creator.AutoSize = true;
-			this.creator.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.creator.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-			this.creator.Location = new System.Drawing.Point(3, 566);
-			this.creator.Name = "creator";
-			this.creator.Size = new System.Drawing.Size(116, 15);
-			this.creator.TabIndex = 12;
-			this.creator.Text = "Designed by Dimidov";
-			// 
-			// importControl1
-			// 
-			this.importControl1.Location = new System.Drawing.Point(0, 0);
-			this.importControl1.Name = "importControl1";
-			this.importControl1.Size = new System.Drawing.Size(872, 552);
-			this.importControl1.TabIndex = 2;
-			// 
 			// EcdisForm
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -192,6 +193,7 @@
 			this.Controls.Add(this.header);
 			this.Controls.Add(this.leftMenu);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "EcdisForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "eGlobe Passage Plan Generator";
