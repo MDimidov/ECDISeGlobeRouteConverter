@@ -192,7 +192,7 @@
 			this.Controls.Add(this.mainPanel);
 			this.Controls.Add(this.header);
 			this.Controls.Add(this.leftMenu);
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "EcdisForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

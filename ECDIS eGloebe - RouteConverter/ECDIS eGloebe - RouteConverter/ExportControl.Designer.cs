@@ -51,6 +51,7 @@
 			this.btnExportHomeInfo.TabIndex = 1;
 			this.btnExportHomeInfo.Text = "Export";
 			this.btnExportHomeInfo.UseVisualStyleBackColor = true;
+			this.btnExportHomeInfo.Click += new System.EventHandler(this.btnExportHomeInfo_Click);
 			// 
 			// ExportControl
 			// 
