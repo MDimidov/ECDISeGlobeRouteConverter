@@ -122,7 +122,7 @@ namespace ECDIS_eGloebe___RouteConverter
 
 		private void btnExportRoute_Click(object sender, EventArgs e)
 		{
-			ExportToWordDoc();
+			//ExportToWordDoc();
 		}
 
 		//private void ExportRouteToFile()
