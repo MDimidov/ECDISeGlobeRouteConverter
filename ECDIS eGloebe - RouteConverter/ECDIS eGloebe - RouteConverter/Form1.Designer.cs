@@ -36,13 +36,11 @@
 			this.btnHome = new System.Windows.Forms.Button();
 			this.btnExport = new System.Windows.Forms.Button();
 			this.header = new System.Windows.Forms.Panel();
-			this.btnExit = new System.Windows.Forms.Button();
 			this.mainPanel = new System.Windows.Forms.Panel();
 			this.importControl1 = new ECDIS_eGloebe___RouteConverter.ImportControl();
 			this.exportControl1 = new ECDIS_eGloebe___RouteConverter.ExportControl();
 			this.homeControl1 = new ECDIS_eGloebe___RouteConverter.HomeControl();
 			this.leftMenu.SuspendLayout();
-			this.header.SuspendLayout();
 			this.mainPanel.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -130,27 +128,11 @@
 			// header
 			// 
 			this.header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-			this.header.Controls.Add(this.btnExit);
 			this.header.Dock = System.Windows.Forms.DockStyle.Top;
 			this.header.Location = new System.Drawing.Point(191, 0);
 			this.header.Name = "header";
 			this.header.Size = new System.Drawing.Size(872, 32);
 			this.header.TabIndex = 10;
-			// 
-			// btnExit
-			// 
-			this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnExit.FlatAppearance.BorderSize = 0;
-			this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnExit.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.btnExit.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.btnExit.Location = new System.Drawing.Point(843, 0);
-			this.btnExit.Name = "btnExit";
-			this.btnExit.Size = new System.Drawing.Size(26, 29);
-			this.btnExit.TabIndex = 0;
-			this.btnExit.Text = "X";
-			this.btnExit.UseVisualStyleBackColor = true;
-			this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
 			// 
 			// mainPanel
 			// 
@@ -199,7 +181,6 @@
 			this.Text = "eGlobe Passage Plan Generator";
 			this.leftMenu.ResumeLayout(false);
 			this.leftMenu.PerformLayout();
-			this.header.ResumeLayout(false);
 			this.mainPanel.ResumeLayout(false);
 			this.ResumeLayout(false);
 
@@ -211,7 +192,6 @@
 		private System.Windows.Forms.Button btnHome;
 		private System.Windows.Forms.Panel sidePanel;
 		private System.Windows.Forms.Panel header;
-		private System.Windows.Forms.Button btnExit;
 		private System.Windows.Forms.Panel mainPanel;
 		private HomeControl homeControl1;
 		private System.Windows.Forms.Button btnExport;

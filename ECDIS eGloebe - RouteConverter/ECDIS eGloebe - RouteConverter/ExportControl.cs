@@ -14,13 +14,11 @@ namespace ECDIS_eGloebe___RouteConverter
 		SaveFileDialog saveFileDialog = new SaveFileDialog()
 		{
 			// Задаване на филтър за разширения на файловете
-			Filter = "Текстови файлове (*.txt)|*.txt|Всички файлове (*.*)|*.*",
+			Filter = "Текстови файлове (*.xlsx)|*.xlsx|Всички файлове (*.*)|*.*",
 			FilterIndex = 1,
 			RestoreDirectory = true
 		};
 
-		string xmlFilePath = "eGlobeTemplate-Excel.xml";
-		string xlsxFilePath = "test.xlsx";
 
 
 
@@ -31,18 +29,13 @@ namespace ECDIS_eGloebe___RouteConverter
 
 		private void btnExportHomeInfo_Click(object sender, EventArgs e)
 		{
-			if (File.Exists(xmlFilePath))
-			{
-				File.Delete(xmlFilePath);
-			}
-
 			ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
 
 			// Създаване на нов Excel пакет с помощта на EPPlus
 			using (ExcelPackage package = new ExcelPackage())
 			{
 				// Добавяне на нов лист
-				ExcelWorksheet worksheet = package.Workbook.Worksheets.Add("Данни");
+				ExcelWorksheet worksheet = package.Workbook.Worksheets.Add("Voyage");
 
 				// Автоматично настройване на ширината на колоните
 				worksheet.Cells.AutoFitColumns();
@@ -69,8 +62,8 @@ namespace ECDIS_eGloebe___RouteConverter
 							AddEmptyRow(worksheet);
 							AddTableHeader(worksheet);
 						}
-						else if (((i + 3) % 10 == 0) 
-								&& i > 9 
+						else if (((i + 3) % 10 == 0)
+								&& i > 9
 								&& RouteDto.Waipoints.Count - 1 != i)
 						{
 							AddNumberPage(worksheet);
@@ -78,7 +71,7 @@ namespace ECDIS_eGloebe___RouteConverter
 							AddEmptyRow(worksheet);
 							AddTableHeader(worksheet);
 						}
-						else if(RouteDto.Waipoints.Count - 1 == i)
+						else if (RouteDto.Waipoints.Count - 1 == i)
 						{
 							AddLastBorder(worksheet);
 							AddNumberPage(worksheet);
@@ -92,11 +85,10 @@ namespace ECDIS_eGloebe___RouteConverter
 				ReplaceText(worksheet, "C1", $"E{RowNo}", "##lastPage##", PageNo.ToString());
 
 				// Запазване на Excel файл
-				package.SaveAs(new FileInfo(xlsxFilePath));
+				//package.SaveAs(new FileInfo(xlsxFilePath));
+				ExportToStringXml(package);
 			}
 
-
-			MessageBox.Show("Таблицата е създадена успешно в XLSX.");
 		}
 
 		private void SetColumnWidth(ExcelWorksheet worksheet)
@@ -785,6 +777,23 @@ namespace ECDIS_eGloebe___RouteConverter
 				if (cell.Text.Contains(searchText))
 				{
 					cell.Value = cell.Text.Replace(searchText, replaceText);
+				}
+			}
+		}
+
+		private void ExportToStringXml(ExcelPackage package)
+		{
+			if (saveFileDialog.ShowDialog() == DialogResult.OK)
+			{
+				try
+				{
+					package.SaveAs(new FileInfo(saveFileDialog.FileName));
+
+					MessageBox.Show("Your file is succesfully saved");
+				}
+				catch (Exception ex)
+				{
+					MessageBox.Show("Eror while saving" + ex.Message);
 				}
 			}
 		}

@@ -39,9 +39,9 @@
 			this.lbExportHomeInfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lbExportHomeInfo.Location = new System.Drawing.Point(51, 38);
 			this.lbExportHomeInfo.Name = "lbExportHomeInfo";
-			this.lbExportHomeInfo.Size = new System.Drawing.Size(236, 19);
+			this.lbExportHomeInfo.Size = new System.Drawing.Size(216, 19);
 			this.lbExportHomeInfo.TabIndex = 0;
-			this.lbExportHomeInfo.Text = "Export XML file with Home Info";
+			this.lbExportHomeInfo.Text = "Export Passage Plan to .xlsx";
 			// 
 			// btnExportHomeInfo
 			// 

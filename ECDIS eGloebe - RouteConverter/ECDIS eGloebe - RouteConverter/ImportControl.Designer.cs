@@ -29,7 +29,6 @@
 		private void InitializeComponent()
 		{
 			this.btnImportRoute = new System.Windows.Forms.Button();
-			this.btnExportRoute = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// btnImportRoute
@@ -42,21 +41,10 @@
 			this.btnImportRoute.UseVisualStyleBackColor = true;
 			this.btnImportRoute.Click += new System.EventHandler(this.btnImportRoute_Click);
 			// 
-			// btnExportRoute
-			// 
-			this.btnExportRoute.Location = new System.Drawing.Point(311, 63);
-			this.btnExportRoute.Name = "btnExportRoute";
-			this.btnExportRoute.Size = new System.Drawing.Size(245, 69);
-			this.btnExportRoute.TabIndex = 38;
-			this.btnExportRoute.Text = "Export route";
-			this.btnExportRoute.UseVisualStyleBackColor = true;
-			this.btnExportRoute.Click += new System.EventHandler(this.btnExportRoute_Click);
-			// 
 			// ImportControl
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Controls.Add(this.btnExportRoute);
 			this.Controls.Add(this.btnImportRoute);
 			this.Name = "ImportControl";
 			this.Size = new System.Drawing.Size(872, 552);
@@ -67,6 +55,5 @@
 		#endregion
 
 		private System.Windows.Forms.Button btnImportRoute;
-		private System.Windows.Forms.Button btnExportRoute;
 	}
 }
