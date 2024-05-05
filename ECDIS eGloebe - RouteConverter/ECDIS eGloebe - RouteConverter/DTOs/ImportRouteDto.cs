@@ -1,4 +1,5 @@
-﻿using System.Xml.Serialization;
+﻿using System.Collections.Generic;
+using System.Xml.Serialization;
 
 namespace ECDIS_eGloebe___RouteConverter.DTOs
 {
@@ -9,6 +10,6 @@ namespace ECDIS_eGloebe___RouteConverter.DTOs
 		//public string Xmlns { get; set; }
 
 		[XmlArray("waypoints")]
-		public ImportWaipointDto[] Waipoints;
+		public List<ImportWaipointDto> Waipoints { get; set; } = new List<ImportWaipointDto>();
 	}
 }

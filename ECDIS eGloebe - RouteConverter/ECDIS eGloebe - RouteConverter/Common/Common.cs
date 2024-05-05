@@ -13,6 +13,8 @@ namespace ECDIS_eGloebe___RouteConverter.Common
 
 		public static ImportRouteDto RouteDto = new ImportRouteDto();
 
+		public static int rowNo = 0;
+
 
 		//public static void ExportToWordDoc()
 		//{

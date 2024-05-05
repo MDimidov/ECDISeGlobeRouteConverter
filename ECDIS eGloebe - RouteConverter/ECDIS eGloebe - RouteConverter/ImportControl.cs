@@ -98,7 +98,7 @@ namespace ECDIS_eGloebe___RouteConverter
 
 		private void CalculateAllDistancesBetweenWp()
 		{
-			for (int i = 1; i < RouteDto.Waipoints.Length; i++)
+			for (int i = 1; i < RouteDto.Waipoints.Count; i++)
 			{
 				(RouteDto.Waipoints[i].Course, RouteDto.Waipoints[i].DistanceFromLastWp) =
 					GetDistanceFromLastWp(
