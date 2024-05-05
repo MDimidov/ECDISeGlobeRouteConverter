@@ -51,7 +51,7 @@ namespace ECDIS_eGloebe___RouteConverter.DTOs
 		[XmlElement(nameof(draftAFT))]
 		public double draftAFT { get; set; }
 
-		public double draftMiddle => (draftFWD * draftAFT) / 2;
+		public double draftMiddle => (draftFWD + draftAFT) / 2;
 
 		[XmlElement(nameof(Voyage))]
 		public string Voyage { get; set; }
