@@ -1,17 +1,10 @@
-﻿//using Aspose.Words;
-//using Aspose.Words.Tables;
-using Aspose.Words;
-using Aspose.Words.Replacing;
-using DocumentFormat.OpenXml.Presentation;
-using DocumentFormat.OpenXml.Spreadsheet;
-using ECDIS_eGloebe___RouteConverter.DTOs;
+﻿using ECDIS_eGloebe___RouteConverter.DTOs;
 using OfficeOpenXml;
 using OfficeOpenXml.Style;
 using System;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using System.Xml;
 using static ECDIS_eGloebe___RouteConverter.Common.Common;
 
 namespace ECDIS_eGloebe___RouteConverter
@@ -455,7 +448,7 @@ namespace ECDIS_eGloebe___RouteConverter
 			MergeCellsByIndex($"B{RowNo + 1}", $"B{RowNo + 1}", worksheet);
 
 			//C Column
-			worksheet.Cells[RowNo, 3].Value = $"##Date##";
+			worksheet.Cells[RowNo, 3].Value = $"";
 			MergeCellsByIndex($"C{RowNo}", $"C{RowNo + 1}", worksheet);
 
 
@@ -464,7 +457,7 @@ namespace ECDIS_eGloebe___RouteConverter
 			MergeCellsByIndex($"D{RowNo}", $"D{RowNo + 1}", worksheet);
 
 			//E Column
-			worksheet.Cells[RowNo, 5].Value = $"##Estimated Speed##";
+			worksheet.Cells[RowNo, 5].Value = $"";
 			MergeCellsByIndex($"E{RowNo}", $"E{RowNo + 1}", worksheet);
 
 			//F Column
@@ -476,15 +469,15 @@ namespace ECDIS_eGloebe___RouteConverter
 			MergeCellsByIndex($"G{RowNo}", $"G{RowNo + 1}", worksheet);
 
 			//H Column
-			worksheet.Cells[RowNo, 8].Value = $"##Chart to be used##";
+			worksheet.Cells[RowNo, 8].Value = $"";
 			MergeCellsByIndex($"H{RowNo}", $"H{RowNo + 1}", worksheet);
 
 			//I Column
-			worksheet.Cells[RowNo, 9].Value = $"##Ship’s reporting System##";
+			worksheet.Cells[RowNo, 9].Value = $"";
 			MergeCellsByIndex($"I{RowNo}", $"I{RowNo + 1}", worksheet);
 
 			//J Column
-			worksheet.Cells[RowNo, 10].Value = $"##VTS station and VHF##";
+			worksheet.Cells[RowNo, 10].Value = $"";
 			MergeCellsByIndex($"J{RowNo}", $"J{RowNo + 1}", worksheet);
 
 			//K Column
@@ -508,7 +501,7 @@ namespace ECDIS_eGloebe___RouteConverter
 			MergeCellsByIndex($"O{RowNo}", $"O{RowNo + 1}", worksheet);
 
 			//P Column
-			worksheet.Cells[RowNo, 16].Value = $"##wp1CurrentDir##";
+			worksheet.Cells[RowNo, 16].Value = $"";
 			MergeCellsByIndex($"P{RowNo}", $"P{RowNo + 1}", worksheet);
 
 			//Q Column
@@ -516,16 +509,16 @@ namespace ECDIS_eGloebe___RouteConverter
 			MergeCellsByIndex($"Q{RowNo}", $"Q{RowNo + 1}", worksheet);
 
 			//R Column
-			worksheet.Cells[RowNo, 18].Value = $"##wp1TideLow##";
+			worksheet.Cells[RowNo, 18].Value = $"";
 			MergeCellsByIndex($"R{RowNo}", $"R{RowNo + 1}", worksheet);
 
 
 			//S Column
-			worksheet.Cells[RowNo, 19].Value = $"##wp1TideHigh##";
+			worksheet.Cells[RowNo, 19].Value = $"";
 			MergeCellsByIndex($"S{RowNo}", $"S{RowNo + 1}", worksheet);
 
 			//T Column
-			worksheet.Cells[RowNo, 20].Value = $"##wp1TideSlack##";
+			worksheet.Cells[RowNo, 20].Value = $"";
 			MergeCellsByIndex($"T{RowNo}", $"T{RowNo + 1}", worksheet);
 
 			//U Column
@@ -533,19 +526,19 @@ namespace ECDIS_eGloebe___RouteConverter
 			MergeCellsByIndex($"U{RowNo}", $"U{RowNo + 1}", worksheet);
 
 			//V Column
-			worksheet.Cells[RowNo + 1, 22].Value = $"##wp1MilesToLock##";
+			worksheet.Cells[RowNo + 1, 22].Value = $"";
 			MergeCellsByIndex($"V{RowNo}", $"V{RowNo + 1}", worksheet);
 
 			//W Column
-			worksheet.Cells[RowNo, 23].Value = $"##wp1EmAnchorage##";
+			worksheet.Cells[RowNo, 23].Value = $"";
 			MergeCellsByIndex($"W{RowNo}", $"W{RowNo + 1}", worksheet);
 
 			//X Column
-			worksheet.Cells[RowNo, 24].Value = $"##wp1NauticalPublications##";
+			worksheet.Cells[RowNo, 24].Value = $"";
 			MergeCellsByIndex($"X{RowNo}", $"X{RowNo + 1}", worksheet);
 
 			//Y Column
-			worksheet.Cells[RowNo, 25].Value = $"##wp1Notes##";
+			worksheet.Cells[RowNo, 25].Value = $"";
 			MergeCellsByIndex($"Y{RowNo}", $"Y{RowNo + 1}", worksheet);
 
 			RowNo += 2;
