@@ -33,10 +33,10 @@ namespace ECDIS_eGloebe___RouteConverter
 			{
 				try
 				{
-					// Отваряне на избрания файл за четене
+					// Open File
 					using (StreamReader sr = new StreamReader(openFileDialog.OpenFile()))
 					{
-						// Четене на съдържание от файла и извеждане на конзолата
+						// Read file
 						string xmlStirng = sr.ReadToEnd();
 
 						xmlStirng = xmlStirng.Replace("http://www.sevencs.com/eglobe/route", "");

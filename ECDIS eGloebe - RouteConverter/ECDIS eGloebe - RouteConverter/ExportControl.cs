@@ -13,13 +13,11 @@ namespace ECDIS_eGloebe___RouteConverter
 	{
 		SaveFileDialog saveFileDialog = new SaveFileDialog()
 		{
-			// Задаване на филтър за разширения на файловете
-			Filter = "Текстови файлове (*.xlsx)|*.xlsx|Всички файлове (*.*)|*.*",
+			// Set filter for extension
+			Filter = "Текстови файлове (*.xlsx)|*.xlsx|All Files (*.*)|*.*",
 			FilterIndex = 1,
 			RestoreDirectory = true
 		};
-
-
 
 
 		public ExportControl()
@@ -31,21 +29,18 @@ namespace ECDIS_eGloebe___RouteConverter
 		{
 			ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
 
-			// Създаване на нов Excel пакет с помощта на EPPlus
+			// Create new Excel file with EPPlus
 			using (ExcelPackage package = new ExcelPackage())
 			{
-				// Добавяне на нов лист
+				// Add New Sheet
 				ExcelWorksheet worksheet = package.Workbook.Worksheets.Add("Voyage");
 
 				// Автоматично настройване на ширината на колоните
-				worksheet.Cells.AutoFitColumns();
 
-				// Задаване на ширина на колоните
+				// Set Column Width and Height
 				SetColumnWidth(worksheet);
 				SetRowHeight(worksheet);
 
-
-				// Задаване брояч на текущия ред
 
 				SetFirstRows(worksheet);
 
@@ -84,8 +79,7 @@ namespace ECDIS_eGloebe___RouteConverter
 
 				ReplaceText(worksheet, "C1", $"E{RowNo}", "##lastPage##", PageNo.ToString());
 
-				// Запазване на Excel файл
-				//package.SaveAs(new FileInfo(xlsxFilePath));
+				// Save Excel fail
 				ExportToStringXml(package);
 			}
 
@@ -403,6 +397,16 @@ namespace ECDIS_eGloebe___RouteConverter
 			worksheet.Cells[RowNo, 25].Value = $"Notes";
 			MergeCellsByIndex($"Y{RowNo}", $"Y{RowNo + 2}", worksheet);
 
+			using (ExcelRange range = worksheet.Cells[$"A{RowNo}:A{RowNo + 3}"])
+			{
+				range.Style.Border.Left.Style = ExcelBorderStyle.Double;
+			}
+
+			using (ExcelRange range = worksheet.Cells[$"Y{RowNo}:Y{RowNo + 3}"])
+			{
+				range.Style.Border.Right.Style = ExcelBorderStyle.Double;
+			}
+
 			RowNo += 3;
 		}
 
@@ -533,8 +537,17 @@ namespace ECDIS_eGloebe___RouteConverter
 			worksheet.Cells[RowNo, 25].Value = $"";
 			MergeCellsByIndex($"Y{RowNo}", $"Y{RowNo + 1}", worksheet);
 
+			using (ExcelRange range = worksheet.Cells[$"A{RowNo}:A{RowNo + 1}"])
+			{
+				range.Style.Border.Left.Style = ExcelBorderStyle.Double;
+			}
+
+			using (ExcelRange range = worksheet.Cells[$"Y{RowNo}:Y{RowNo + 1}"])
+			{
+				range.Style.Border.Right.Style = ExcelBorderStyle.Double;
+			}
+
 			RowNo += 2;
-			//RemovePageBreak(worksheet);
 		}
 
 		private void AddNameSide(ExcelWorksheet worksheet)
@@ -603,6 +616,16 @@ namespace ECDIS_eGloebe___RouteConverter
 			using (ExcelRange range = worksheet.Cells[$"A{RowNo}:Y{RowNo}"])
 			{
 				range.Style.Border.Top.Style = ExcelBorderStyle.Double;
+			}
+
+			using (ExcelRange range = worksheet.Cells[$"A{RowNo}:A{RowNo + 4}"])
+			{
+				range.Style.Border.Left.Style = ExcelBorderStyle.Double;
+			}
+
+			using (ExcelRange range = worksheet.Cells[$"Y{RowNo}:Y{RowNo + 4}"])
+			{
+				range.Style.Border.Right.Style = ExcelBorderStyle.Double;
 			}
 
 			//Increase rows count
@@ -723,7 +746,7 @@ namespace ECDIS_eGloebe___RouteConverter
 			worksheet.PrinterSettings.BottomMargin = 0.5M;
 
 			worksheet.PrinterSettings.Orientation = eOrientation.Landscape;
-			worksheet.PrinterSettings.Scale = 84;
+			worksheet.PrinterSettings.Scale = 80;
 			worksheet.PrinterSettings.HorizontalCentered = true;
 
 			for (int i = 1; i <= maxRowIndex; i++)
@@ -743,7 +766,7 @@ namespace ECDIS_eGloebe___RouteConverter
 			worksheet.Row(RowNo).PageBreak = false;
 		}
 
-		// Метод за преобразуване на номера на колона към буква
+		// Method to convert column number in letter
 		private string ExcelColumnFromNumber(int column)
 		{
 			int dividend = column;
@@ -768,7 +791,8 @@ namespace ECDIS_eGloebe___RouteConverter
 			}
 		}
 
-		private void ReplaceText(ExcelWorksheet worksheet, string startCell, string endCell, string searchText, string replaceText)
+		private void ReplaceText(ExcelWorksheet worksheet, string startCell, 
+			string endCell, string searchText, string replaceText)
 		{
 			ExcelRangeBase range = worksheet.Cells[$"{startCell}:{endCell}"];
 

@@ -352,10 +352,12 @@
 			// dateOfCreatingRoute
 			// 
 			this.dateOfCreatingRoute.CalendarForeColor = System.Drawing.SystemColors.WindowText;
-			this.dateOfCreatingRoute.Font = new System.Drawing.Font("Century Gothic", 14.25F);
+			this.dateOfCreatingRoute.CustomFormat = "dd MMM yyyy";
+			this.dateOfCreatingRoute.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.dateOfCreatingRoute.ImeMode = System.Windows.Forms.ImeMode.On;
 			this.dateOfCreatingRoute.Location = new System.Drawing.Point(517, 329);
 			this.dateOfCreatingRoute.Name = "dateOfCreatingRoute";
-			this.dateOfCreatingRoute.Size = new System.Drawing.Size(200, 31);
+			this.dateOfCreatingRoute.Size = new System.Drawing.Size(259, 27);
 			this.dateOfCreatingRoute.TabIndex = 43;
 			this.dateOfCreatingRoute.Value = new System.DateTime(2024, 5, 2, 17, 59, 39, 0);
 			// 

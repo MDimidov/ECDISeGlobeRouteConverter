@@ -33,6 +33,7 @@ namespace ECDIS_eGloebe___RouteConverter
 		private void btnConfirmHomeInfo_Click(object sender, EventArgs e)
 		{
 			SetFormInfo();
+			MessageBox.Show("Your successfuly apllied this information");
 		}
 
 		private void btnImportHomeInfo_Click(object sender, EventArgs e)
@@ -61,7 +62,7 @@ namespace ECDIS_eGloebe___RouteConverter
 			HomeInfo.SafetyCountDepth = tbSafetyContDepth.Text;
 			HomeInfo.Ets = tbEts.Text;
 			HomeInfo.Eta = tbEta.Text;
-			HomeInfo.CreationDate = dateOfCreatingRoute.MinDate;
+			HomeInfo.CreationDate = dateOfCreatingRoute.Value;
 
 			if (double.TryParse(tbDraftFwd.Text, out double draftFwd))
 			{
@@ -128,10 +129,8 @@ namespace ECDIS_eGloebe___RouteConverter
 			{
 				try
 				{
-					// Отваряне на избрания файл за четене
 					using (StreamReader sr = new StreamReader(openFileDialog.OpenFile()))
 					{
-						// Четене на съдържание от файла и извеждане на конзолата
 						string xmlStirng = sr.ReadToEnd();
 
 						HomeInfo = new XmlHelper()

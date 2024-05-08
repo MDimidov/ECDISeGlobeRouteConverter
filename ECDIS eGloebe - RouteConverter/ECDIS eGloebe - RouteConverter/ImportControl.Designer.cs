@@ -29,6 +29,7 @@
 		private void InitializeComponent()
 		{
 			this.btnImportRoute = new System.Windows.Forms.Button();
+			this.lbImportRte = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// btnImportRoute
@@ -41,19 +42,32 @@
 			this.btnImportRoute.UseVisualStyleBackColor = true;
 			this.btnImportRoute.Click += new System.EventHandler(this.btnImportRoute_Click);
 			// 
+			// lbImportRte
+			// 
+			this.lbImportRte.AutoSize = true;
+			this.lbImportRte.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lbImportRte.Location = new System.Drawing.Point(79, 41);
+			this.lbImportRte.Name = "lbImportRte";
+			this.lbImportRte.Size = new System.Drawing.Size(175, 19);
+			this.lbImportRte.TabIndex = 38;
+			this.lbImportRte.Text = "Import Route File (.rte)";
+			// 
 			// ImportControl
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.lbImportRte);
 			this.Controls.Add(this.btnImportRoute);
 			this.Name = "ImportControl";
 			this.Size = new System.Drawing.Size(872, 552);
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
 		#endregion
 
 		private System.Windows.Forms.Button btnImportRoute;
+		private System.Windows.Forms.Label lbImportRte;
 	}
 }
