@@ -65,9 +65,9 @@
 			this.creator.ForeColor = System.Drawing.SystemColors.ButtonShadow;
 			this.creator.Location = new System.Drawing.Point(3, 566);
 			this.creator.Name = "creator";
-			this.creator.Size = new System.Drawing.Size(116, 15);
+			this.creator.Size = new System.Drawing.Size(111, 15);
 			this.creator.TabIndex = 12;
-			this.creator.Text = "Designed by Dimidov";
+			this.creator.Text = "Created by Dimidov";
 			// 
 			// sidePanel
 			// 
